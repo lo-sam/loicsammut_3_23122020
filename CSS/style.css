@@ -159,6 +159,7 @@ section h1 {
 .index_carte1 {
   width: auto;
   height: 250px;
+  position: relative;
   margin-bottom: 20px;
   background-color: #fff;
   border-radius: 25px;
@@ -185,6 +186,54 @@ section h1 {
 
 .index_carte1 p {
   margin: 0 10px;
+}
+
+.index_carte1 .like {
+  position: absolute;
+  top: 200px;
+  left: -10000%;
+}
+
+.index_carte1 #like1:checked + .heart__Empty {
+  color: #9356DC;
+  z-index: 0;
+}
+
+.index_carte1 #like2:checked + .heart__Empty {
+  color: #9356DC;
+  z-index: 0;
+}
+
+.index_carte1 #like3:checked + .heart__Empty {
+  color: #9356DC;
+  z-index: 0;
+}
+
+.index_carte1 #like4:checked + .heart__Empty {
+  color: #9356DC;
+  z-index: 0;
+}
+
+.index_carte1 .heart {
+  cursor: pointer;
+  font-size: 1.4rem;
+  position: absolute;
+  left: 85%;
+  top: 200px;
+}
+
+.index_carte1 .heart__Full {
+  color: #9356DC;
+}
+
+.index_carte1 .heart__Empty {
+  color: #9356DC;
+  background-color: #FFF;
+  z-index: 1;
+}
+
+.index_carte1 .heart__Empty:hover {
+  opacity: 0.4;
 }
 
 footer .wrapper {
