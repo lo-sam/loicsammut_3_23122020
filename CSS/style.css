@@ -24,6 +24,15 @@ body {
   background-color: #F6F6F6;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.retourMenu {
+  display: none;
+}
+
 .logo {
   background-color: #FFF;
 }
@@ -87,6 +96,11 @@ form input {
   margin: 30px 25%;
 }
 
+.btn__explo:hover {
+  background: -webkit-gradient(linear, right top, left top, from(#ff93e1), to(#a16be0));
+  background: linear-gradient(270deg, #ff93e1, #a16be0);
+}
+
 .btn__nav {
   height: 70px;
   width: 100%;
@@ -100,7 +114,9 @@ form input {
 }
 
 .btn__nav:hover {
-  background-color: #f2eafb;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #ece1f9;
 }
 
 .btn__nav:hover i {
@@ -195,23 +211,39 @@ section h1 {
 }
 
 .index_carte1 #like1:checked + .heart__Empty {
-  color: #9356DC;
   z-index: 0;
+}
+
+.index_carte1 #like1:checked + .heart__Empty + .heart__Full {
+  -webkit-animation: likeAnime 2s;
+          animation: likeAnime 2s;
 }
 
 .index_carte1 #like2:checked + .heart__Empty {
-  color: #9356DC;
   z-index: 0;
+}
+
+.index_carte1 #like2:checked + .heart__Empty + .heart__Full {
+  -webkit-animation: likeAnime 2s;
+          animation: likeAnime 2s;
 }
 
 .index_carte1 #like3:checked + .heart__Empty {
-  color: #9356DC;
   z-index: 0;
 }
 
+.index_carte1 #like3:checked + .heart__Empty + .heart__Full {
+  -webkit-animation: likeAnime 2s;
+          animation: likeAnime 2s;
+}
+
 .index_carte1 #like4:checked + .heart__Empty {
-  color: #9356DC;
   z-index: 0;
+}
+
+.index_carte1 #like4:checked + .heart__Empty + .heart__Full {
+  -webkit-animation: likeAnime 2s;
+          animation: likeAnime 2s;
 }
 
 .index_carte1 .heart {
@@ -227,13 +259,59 @@ section h1 {
 }
 
 .index_carte1 .heart__Empty {
-  color: #9356DC;
+  color: #7E7E7E;
   background-color: #FFF;
   z-index: 1;
 }
 
 .index_carte1 .heart__Empty:hover {
   opacity: 0.4;
+}
+
+@-webkit-keyframes likeAnime {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes likeAnime {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 footer .wrapper {
@@ -253,7 +331,7 @@ footer li {
 }
 
 footer a {
-  text-decoration: none;
+  color: #fff;
 }
 
 footer a i {

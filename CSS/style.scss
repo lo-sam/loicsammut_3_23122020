@@ -40,6 +40,15 @@ body{
     background-color: $color-back ;
 }
 
+a{
+    text-decoration: none;
+    color: $color-font-txt;
+}
+
+.retourMenu{
+    display: none;
+}
+
 .logo{
     background-color: $color-back2;
     & h1{
@@ -98,7 +107,12 @@ form{
     color: #fff;
     font-weight: bold;
     height: 50px;
-    margin: 30px 25%;    
+    margin: 30px 25%;
+    &__explo{
+        &:hover{
+            background: linear-gradient(270deg, lighten($color-sec, 5%), lighten($color-prim, 5%));
+        }    
+    }    
     &__nav{
         height: 70px;
         width: 100%;
@@ -110,7 +124,8 @@ form{
         text-align: left;
         padding: 10px 0;
         &:hover{
-            background-color: lighten($color-prim, 35%);
+            transition: .5s;
+            background-color: lighten($color-prim, 33%);
             i{
                 color: $color-prim;
             }
@@ -193,26 +208,34 @@ section{
     }
     & #like1{
         &:checked + .heart__Empty{
-            color: $color-prim;
             z-index: 0;
+            & + .heart__Full{
+                animation: likeAnime 2s;
+            }
         }
     }
     & #like2{
         &:checked + .heart__Empty{
-            color: $color-prim;
             z-index: 0;
+            & + .heart__Full{
+                animation: likeAnime 2s;
+            }
         }
     }
     & #like3{
         &:checked + .heart__Empty{
-            color: $color-prim;
             z-index: 0;
+            & + .heart__Full{
+                animation: likeAnime 2s;
+            }
         }
     }
     & #like4{
         &:checked + .heart__Empty{
-            color: $color-prim;
             z-index: 0;
+            & + .heart__Full{
+                animation: likeAnime 2s;
+            }
         }
     }
     & .heart{
@@ -225,13 +248,31 @@ section{
             color: $color-prim;
         }
         &__Empty{
-            color: $color-prim;
+            color: $color-font-com;
             background-color: $color-back2;
             z-index: 1;
             &:hover{
                 opacity: 0.4;
             }
         }
+    }
+}
+
+@keyframes likeAnime{
+    0% {
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.2);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
     }
 }
 
@@ -251,7 +292,7 @@ footer{
         padding: 10px 8%;
     }
     & a{
-        text-decoration: none;
+        color: $color-font-foot;
         & i{
             font-size: 0.8rem;
             margin-right: 3%;
