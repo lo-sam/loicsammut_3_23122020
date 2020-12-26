@@ -33,8 +33,8 @@ body {
   background-color: #99E2D0;
   margin: auto;
   line-height: 500px;
-  -webkit-animation: disparition 1 1s linear 30000s forwards;
-          animation: disparition 1 1s linear 30000s forwards;
+  -webkit-animation: disparition 1 1s linear 3s forwards;
+          animation: disparition 1 1s linear 3s forwards;
 }
 
 .loadingSpinner .couvertAssiette {
