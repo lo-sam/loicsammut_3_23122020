@@ -21,7 +21,95 @@ body {
   max-width: 375px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #F6F6F6;
+  background-color: #f2f2f2;
+}
+
+.loadingSpinner {
+  padding: 0%;
+  position: absolute;
+  height: 900px;
+  width: 100%;
+  z-index: 2;
+  background-color: #99E2D0;
+  margin: auto;
+  line-height: 500px;
+  -webkit-animation: disparition 1 1s linear 30000s forwards;
+          animation: disparition 1 1s linear 30000s forwards;
+}
+
+.loadingSpinner .couvertAssiette {
+  margin: auto;
+  text-align: center;
+}
+
+.loadingSpinner img {
+  height: 60px;
+}
+
+.loadingSpinner .loader-quart {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 50px;
+  border: 6px solid #9256dc6e;
+  position: relative;
+}
+
+.loadingSpinner .loader-quart::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: #9356DC;
+  border-bottom-color: #9356DC;
+  -webkit-animation: spin .5s infinite ease;
+          animation: spin .5s infinite ease;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
 }
 
 a {
@@ -34,7 +122,7 @@ a {
 }
 
 .logo {
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .logo h1 {
@@ -49,7 +137,7 @@ a {
 form {
   width: 100%;
   height: 60px;
-  background-color: #EAEAEA;
+  background-color: #d9d9d9;
   margin: auto;
   -webkit-box-shadow: 0 0 5px #bdbdbd;
           box-shadow: 0 0 5px #bdbdbd;
@@ -65,7 +153,7 @@ form input {
   width: 60%;
   font-size: 1.2rem;
   font-weight: bold;
-  background-color: #EAEAEA;
+  background-color: #d9d9d9;
   padding: 19px 0;
   margin-left: 5%;
 }
@@ -80,14 +168,14 @@ form input {
 .com_search {
   margin: 0 10%;
   text-align: center;
-  color: #7E7E7E;
+  color: gray;
 }
 
 .btn {
   border-style: none;
   border-radius: 50px;
-  -webkit-box-shadow: 5px 5px 10px #e8e7e7;
-          box-shadow: 5px 5px 10px #e8e7e7;
+  -webkit-box-shadow: 5px 5px 10px #b3b3b3;
+          box-shadow: 5px 5px 10px #b3b3b3;
   width: 50%;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   color: #fff;
@@ -97,14 +185,19 @@ form input {
 }
 
 .btn__explo:hover {
-  background: -webkit-gradient(linear, right top, left top, from(#ff93e1), to(#a16be0));
-  background: linear-gradient(270deg, #ff93e1, #a16be0);
+  -webkit-transition: .5s;
+  transition: .5s;
+  background: linear-gradient(170deg, #ff93e1, #a16be0);
+  -webkit-box-shadow: 2px 2px 10px #333333;
+          box-shadow: 2px 2px 10px #333333;
 }
 
 .btn__nav {
   height: 70px;
   width: 100%;
   background: #fff;
+  -webkit-box-shadow: 5px 5px 10px #e6e6e6;
+          box-shadow: 5px 5px 10px #e6e6e6;
   color: #000;
   font-size: 1.1rem;
   border-radius: 20px;
@@ -117,6 +210,8 @@ form input {
   -webkit-transition: .5s;
   transition: .5s;
   background-color: #ece1f9;
+  -webkit-box-shadow: 5px 5px 10px #b3b3b3;
+          box-shadow: 5px 5px 10px #b3b3b3;
 }
 
 .btn__nav:hover i {
@@ -125,7 +220,7 @@ form input {
 
 .btn__nav i {
   margin: 0 10%;
-  color: #7E7E7E;
+  color: gray;
 }
 
 .fonction {
@@ -162,7 +257,7 @@ form input {
 }
 
 section {
-  margin: 50px auto;
+  margin: 50px auto 0 auto;
   padding: 4%;
 }
 
@@ -179,8 +274,8 @@ section h1 {
   margin-bottom: 20px;
   background-color: #fff;
   border-radius: 25px;
-  -webkit-box-shadow: 1px 1px 15px #7E7E7E;
-          box-shadow: 1px 1px 15px #7E7E7E;
+  -webkit-box-shadow: 5px 5px 10px #e6e6e6;
+          box-shadow: 5px 5px 10px #e6e6e6;
 }
 
 .index_carte1 img {
@@ -200,7 +295,7 @@ section h1 {
   margin: 10px;
 }
 
-.index_carte1 p {
+.index_carte1 .lieu {
   margin: 0 10px;
 }
 
@@ -260,12 +355,26 @@ section h1 {
 
 .index_carte1 .heart__Empty {
   color: #7E7E7E;
-  background-color: #FFF;
+  background-color: #fff;
   z-index: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .index_carte1 .heart__Empty:hover {
-  opacity: 0.4;
+  opacity: 0.3;
+}
+
+.index_carte1 .new {
+  background-color: #99E2D0;
+  color: #278870;
+  font-weight: bold;
+  padding: 3%;
+  position: absolute;
+  top: 20px;
+  left: 70%;
+  -webkit-animation: newResto 3s infinite;
+          animation: newResto 3s infinite;
 }
 
 @-webkit-keyframes likeAnime {
@@ -314,6 +423,68 @@ section h1 {
   }
 }
 
+@-webkit-keyframes newResto {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  20% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  30% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  40% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes newResto {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  20% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  30% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  40% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 footer .wrapper {
   background-color: #353535;
   color: #fff;
@@ -322,7 +493,7 @@ footer .wrapper {
 footer h2 {
   font-size: 1.2rem;
   font-family: 'Shrikhand';
-  margin: 20px 8%;
+  margin: 0 8% 20px 8%;
   padding-top: 20px;
 }
 
