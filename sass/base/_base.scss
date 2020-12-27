@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    color: $color-font-txt;
+    font-family: 'robotothin', Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.wrapper{
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: darken($color-back, 5%);
+}

@@ -1,0 +1,15 @@
+.retourMenu{
+    display: none;
+}
+
+.logo{
+    background-color: $color-back;
+    & h1{
+        font-size: 2.4rem;
+        font-family: 'Shrikhand';
+        margin-bottom: 20px;
+        width: 50%;
+        margin: auto;
+        padding: 20px 0;
+        }
+}

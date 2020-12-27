@@ -1,0 +1,15 @@
+//Utils
+@import"./sass/utils/variables";
+//Base
+@import"./sass/base/reset";
+@import"./sass/base/fonts";
+@import"./sass/base/base";
+//Composents
+@import"./sass/composents/formulaire";
+@import"./sass/composents/bouton";
+//Layout
+@import"./sass/layout/header";
+@import"./sass/layout/nav";
+@import"./sass/layout/footer";
+//Pages
+@import"./sass/pages/index";

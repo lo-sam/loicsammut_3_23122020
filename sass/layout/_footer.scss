@@ -1,0 +1,26 @@
+footer{
+    & .wrapper{
+    background-color: $color-footer;
+    color: $color-font-foot;
+
+    }
+    & h2{
+    font-size: 1.2rem;
+    font-family: 'Shrikhand';
+    margin: 0 8% 20px 8%;
+    padding-top: 20px;
+    }
+    & li{
+        padding: 10px 8%;
+    }
+    & a{
+        color: $color-font-foot;
+        & i{
+            font-size: 0.8rem;
+            margin-right: 3%;
+        }
+        &:visited{
+            color: $color-font-foot;
+        }
+    }
+}

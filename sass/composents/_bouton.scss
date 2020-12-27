@@ -1,0 +1,61 @@
+.btn{
+    border-style: none;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px darken($color: $color-back, $amount: 30%);
+    width: 50%;
+    background: linear-gradient(170deg, $color-sec, $color-prim);
+    color: $color-back;
+    font-weight: bold;
+    height: 50px;
+    margin: 30px 25%;
+    &__explo{
+        &:hover{
+            transition: .5s;
+            background: linear-gradient(170deg, lighten($color-sec, 5%), lighten($color-prim, 5%));
+            box-shadow: 2px 2px 10px darken($color-back, 80%);
+        }    
+    }    
+    &__nav{
+        height: 70px;
+        width: 100%;
+        background: $color-back;
+        box-shadow: 5px 5px 10px darken($color-back,10%);
+        color: $color-font-txt;
+        font-size: 1.1rem;
+        border-radius: 20px;
+        margin: 20px auto 0 auto;
+        text-align: left;
+        padding: 10px 0;
+        &:hover{
+            transition: .5s;
+            background-color: lighten($color-prim, 33%);
+            box-shadow: 5px 5px 10px darken($color-back,30%);
+            i{
+                color: $color-prim;
+            }
+        }
+        & i{
+            margin: 0 10%;
+            color: lighten($color-font-txt, 50%);
+        }
+    }
+}
+
+.btn_chiffre{
+    position: absolute;
+    left: 3%;
+    background-color: $color-prim;
+    color: white;
+    font-size: 1rem;
+    border-radius: 25px;
+    padding: 5px 9px;
+    &--1{
+        top: 95px;
+    }
+    &--2{
+        top: 185px;
+    }
+    &--3{
+        top: 275px;
+    }
+}

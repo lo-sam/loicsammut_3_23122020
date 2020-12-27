@@ -1,11 +1,65 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 @font-face {
   font-family: 'robotothin';
-  src: url("../Fonts/roboto_thin_macroman/Roboto-Thin-webfont.eot");
-  src: url("../Fonts/roboto_thin_macroman/Roboto-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../Fonts/roboto_thin_macroman/Roboto-Thin-webfont.woff2") format("woff2"), url("../Fonts/roboto_thin_macroman/Roboto-Thin-webfont.woff") format("woff"), url("../Fonts/roboto_thin_macroman/Roboto-Thin-webfont.ttf") format("truetype"), url("../Fonts/roboto_thin_macroman/Roboto-Thin-webfont.svg#robotothin") format("svg");
+  src: url("../../../public/Fonts/roboto_thin_macroman/Roboto-Thin-webfont.eot");
+  src: url("../../../public/Fonts/roboto_thin_macroman/Roboto-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../../../public/Fonts/roboto_thin_macroman/Roboto-Thin-webfont.woff2") format("woff2"), url("../../../public/Fonts/roboto_thin_macroman/Roboto-Thin-webfont.woff") format("woff"), url("../../../public/Fonts/roboto_thin_macroman/Roboto-Thin-webfont.ttf") format("truetype"), url("../../../public/Fonts/roboto_thin_macroman/Roboto-Thin-webfont.svg#robotothin") format("svg");
   font-weight: normal;
   font-style: normal;
   font-family: 'Shrikhand';
-  src: url("../Fonts/Shrikhand-Regular.otf");
+  src: url("../../../public/Fonts/Shrikhand-Regular.otf");
 }
 
 body {
@@ -24,10 +78,165 @@ body {
   background-color: #f2f2f2;
 }
 
+form {
+  width: 100%;
+  height: 60px;
+  background-color: #d9d9d9;
+  margin: auto;
+  -webkit-box-shadow: 0 0 5px #bdbdbd;
+          box-shadow: 0 0 5px #bdbdbd;
+}
+
+form label {
+  margin-left: 25%;
+  font-size: 1.2rem;
+}
+
+form input {
+  border: none;
+  width: 60%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #d9d9d9;
+  padding: 19px 0;
+  margin-left: 5%;
+}
+
+.btn {
+  border-style: none;
+  border-radius: 50px;
+  -webkit-box-shadow: 5px 5px 10px #b3b3b3;
+          box-shadow: 5px 5px 10px #b3b3b3;
+  width: 50%;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  color: #fff;
+  font-weight: bold;
+  height: 50px;
+  margin: 30px 25%;
+}
+
+.btn__explo:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+  background: linear-gradient(170deg, #ff93e1, #a16be0);
+  -webkit-box-shadow: 2px 2px 10px #333333;
+          box-shadow: 2px 2px 10px #333333;
+}
+
+.btn__nav {
+  height: 70px;
+  width: 100%;
+  background: #fff;
+  -webkit-box-shadow: 5px 5px 10px #e6e6e6;
+          box-shadow: 5px 5px 10px #e6e6e6;
+  color: #000;
+  font-size: 1.1rem;
+  border-radius: 20px;
+  margin: 20px auto 0 auto;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.btn__nav:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #ece1f9;
+  -webkit-box-shadow: 5px 5px 10px #b3b3b3;
+          box-shadow: 5px 5px 10px #b3b3b3;
+}
+
+.btn__nav:hover i {
+  color: #9356DC;
+}
+
+.btn__nav i {
+  margin: 0 10%;
+  color: gray;
+}
+
+.btn_chiffre {
+  position: absolute;
+  left: 3%;
+  background-color: #9356DC;
+  color: white;
+  font-size: 1rem;
+  border-radius: 25px;
+  padding: 5px 9px;
+}
+
+.btn_chiffre--1 {
+  top: 95px;
+}
+
+.btn_chiffre--2 {
+  top: 185px;
+}
+
+.btn_chiffre--3 {
+  top: 275px;
+}
+
+.retourMenu {
+  display: none;
+}
+
+.logo {
+  background-color: #fff;
+}
+
+.logo h1 {
+  font-size: 2.4rem;
+  font-family: 'Shrikhand';
+  margin-bottom: 20px;
+  width: 50%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.fonction {
+  position: relative;
+  padding: 30px 5%;
+  background-color: #fff;
+}
+
+.fonction p {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+footer .wrapper {
+  background-color: #353535;
+  color: #fff;
+}
+
+footer h2 {
+  font-size: 1.2rem;
+  font-family: 'Shrikhand';
+  margin: 0 8% 20px 8%;
+  padding-top: 20px;
+}
+
+footer li {
+  padding: 10px 8%;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a i {
+  font-size: 0.8rem;
+  margin-right: 3%;
+}
+
+footer a:visited {
+  color: #fff;
+}
+
 .loadingSpinner {
   padding: 0%;
   position: absolute;
-  height: 1500px;
+  height: 100%;
   width: 100%;
   z-index: 2;
   background-color: #99E2D0;
@@ -117,47 +326,6 @@ a {
   color: #000;
 }
 
-.retourMenu {
-  display: none;
-}
-
-.logo {
-  background-color: #fff;
-}
-
-.logo h1 {
-  font-size: 2.4rem;
-  font-family: 'Shrikhand';
-  margin-bottom: 20px;
-  width: 50%;
-  margin: auto;
-  padding: 20px 0;
-}
-
-form {
-  width: 100%;
-  height: 60px;
-  background-color: #d9d9d9;
-  margin: auto;
-  -webkit-box-shadow: 0 0 5px #bdbdbd;
-          box-shadow: 0 0 5px #bdbdbd;
-}
-
-form label {
-  margin-left: 25%;
-  font-size: 1.2rem;
-}
-
-form input {
-  border: none;
-  width: 60%;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background-color: #d9d9d9;
-  padding: 19px 0;
-  margin-left: 5%;
-}
-
 .text_acc1 {
   margin: 40px 15% 20px 15%;
   font-size: 1.6rem;
@@ -169,91 +337,6 @@ form input {
   margin: 0 10%;
   text-align: center;
   color: gray;
-}
-
-.btn {
-  border-style: none;
-  border-radius: 50px;
-  -webkit-box-shadow: 5px 5px 10px #b3b3b3;
-          box-shadow: 5px 5px 10px #b3b3b3;
-  width: 50%;
-  background: linear-gradient(170deg, #FF79DA, #9356DC);
-  color: #fff;
-  font-weight: bold;
-  height: 50px;
-  margin: 30px 25%;
-}
-
-.btn__explo:hover {
-  -webkit-transition: .5s;
-  transition: .5s;
-  background: linear-gradient(170deg, #ff93e1, #a16be0);
-  -webkit-box-shadow: 2px 2px 10px #333333;
-          box-shadow: 2px 2px 10px #333333;
-}
-
-.btn__nav {
-  height: 70px;
-  width: 100%;
-  background: #fff;
-  -webkit-box-shadow: 5px 5px 10px #e6e6e6;
-          box-shadow: 5px 5px 10px #e6e6e6;
-  color: #000;
-  font-size: 1.1rem;
-  border-radius: 20px;
-  margin: 20px auto 0 auto;
-  text-align: left;
-  padding: 10px 0;
-}
-
-.btn__nav:hover {
-  -webkit-transition: .5s;
-  transition: .5s;
-  background-color: #ece1f9;
-  -webkit-box-shadow: 5px 5px 10px #b3b3b3;
-          box-shadow: 5px 5px 10px #b3b3b3;
-}
-
-.btn__nav:hover i {
-  color: #9356DC;
-}
-
-.btn__nav i {
-  margin: 0 10%;
-  color: gray;
-}
-
-.fonction {
-  position: relative;
-  padding: 30px 5%;
-  background-color: #fff;
-}
-
-.fonction p {
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-
-.btn_chiffre {
-  position: absolute;
-  left: 3%;
-  background-color: #9356DC;
-  color: white;
-  font-size: 1rem;
-  border-radius: 25px;
-  padding: 5px 9px;
-}
-
-.btn_chiffre--1 {
-  top: 95px;
-}
-
-.btn_chiffre--2 {
-  top: 185px;
-}
-
-.btn_chiffre--3 {
-  top: 275px;
 }
 
 section {
@@ -483,34 +566,5 @@ section h1 {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-}
-
-footer .wrapper {
-  background-color: #353535;
-  color: #fff;
-}
-
-footer h2 {
-  font-size: 1.2rem;
-  font-family: 'Shrikhand';
-  margin: 0 8% 20px 8%;
-  padding-top: 20px;
-}
-
-footer li {
-  padding: 10px 8%;
-}
-
-footer a {
-  color: #fff;
-}
-
-footer a i {
-  font-size: 0.8rem;
-  margin-right: 3%;
-}
-
-footer a:visited {
-  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

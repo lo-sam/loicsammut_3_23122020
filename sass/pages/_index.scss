@@ -1,47 +1,7 @@
-$color-prim: #9356DC;
-$color-sec: #FF79DA;
-$color-ter: #99E2D0;
-$color-back: #fff;
-$color-font-txt: #000;
-$color-font-com: #7E7E7E;
-$color-font-foot: #fff;
-$color-footer: #353535;
-
-@font-face {
-    font-family: 'robotothin';
-    src: url('../Fonts/roboto_thin_macroman/Roboto-Thin-webfont.eot');
-    src: url('../Fonts/roboto_thin_macroman/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../Fonts/roboto_thin_macroman/Roboto-Thin-webfont.woff2') format('woff2'),
-         url('../Fonts/roboto_thin_macroman/Roboto-Thin-webfont.woff') format('woff'),
-         url('../Fonts/roboto_thin_macroman/Roboto-Thin-webfont.ttf') format('truetype'),
-         url('../Fonts/roboto_thin_macroman/Roboto-Thin-webfont.svg#robotothin') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'Shrikhand';
-    src: url('../Fonts/Shrikhand-Regular.otf');
-}
-
-
-body{
-    margin: 0;
-    padding: 0;
-    width: auto;
-    color: $color-font-txt;
-    font-family: 'robotothin', Arial, sans-serif;
-    font-size: 1rem;
-}
-
-.wrapper{
-    max-width: 375px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: darken($color-back, 5%);
-}
-
 .loadingSpinner{
     padding: 0%;
     position: absolute;
-    height: 1500px;
+    height: 100%;
     width: 100%;
     z-index: 2;
     background-color: #99E2D0;
@@ -98,49 +58,9 @@ body{
     }
 }
 
-
 a{
     text-decoration: none;
     color: $color-font-txt;
-}
-
-.retourMenu{
-    display: none;
-}
-
-.logo{
-    background-color: $color-back;
-    & h1{
-        font-size: 2.4rem;
-        font-family: 'Shrikhand';
-        margin-bottom: 20px;
-        width: 50%;
-        margin: auto;
-        padding: 20px 0;
-        }
-}
-
-form{
-    width: 100%;
-    height: 60px;
-    background-color: darken($color-back,15%);
-    margin: auto;
-    box-shadow: 0 0 5px #bdbdbd;
-    & label{
-        margin-left: 25%;
-        font-size: 1.2rem;
-    }
-    & input{
-        border: none;
-        width: 60%;
-        font-size: 1.2rem;
-        font-weight: bold;
-        background-color: darken($color-back,15%);
-        padding: 19px 0;
-
-        margin-left: 5%;
-
-    }
 }
 
 .text_acc1{
@@ -156,79 +76,6 @@ form{
     color: lighten($color-font-txt, 50%);
 
 }
-
-.btn{
-    border-style: none;
-    border-radius: 50px;
-    box-shadow: 5px 5px 10px darken($color: $color-back, $amount: 30%);
-    width: 50%;
-    background: linear-gradient(170deg, $color-sec, $color-prim);
-    color: $color-back;
-    font-weight: bold;
-    height: 50px;
-    margin: 30px 25%;
-    &__explo{
-        &:hover{
-            transition: .5s;
-            background: linear-gradient(170deg, lighten($color-sec, 5%), lighten($color-prim, 5%));
-            box-shadow: 2px 2px 10px darken($color-back, 80%);
-        }    
-    }    
-    &__nav{
-        height: 70px;
-        width: 100%;
-        background: $color-back;
-        box-shadow: 5px 5px 10px darken($color-back,10%);
-        color: $color-font-txt;
-        font-size: 1.1rem;
-        border-radius: 20px;
-        margin: 20px auto 0 auto;
-        text-align: left;
-        padding: 10px 0;
-        &:hover{
-            transition: .5s;
-            background-color: lighten($color-prim, 33%);
-            box-shadow: 5px 5px 10px darken($color-back,30%);
-            i{
-                color: $color-prim;
-            }
-        }
-        & i{
-            margin: 0 10%;
-            color: lighten($color-font-txt, 50%);
-        }
-    }
-}
-
-.fonction{
-    position: relative;
-    padding: 30px 5%;
-    background-color: $color-back;
-    & p{
-        font-size: 1.6rem;
-        font-weight: bold;
-    }
-}
-
-.btn_chiffre{
-    position: absolute;
-    left: 3%;
-    background-color: $color-prim;
-    color: white;
-    font-size: 1rem;
-    border-radius: 25px;
-    padding: 5px 9px;
-    &--1{
-        top: 95px;
-    }
-    &--2{
-        top: 185px;
-    }
-    &--3{
-        top: 275px;
-    }
-}
-
 
 section{
     margin: 50px auto 0 auto;
@@ -372,32 +219,5 @@ section{
     }    
     100%{
         transform: rotate(0deg);
-    }
-}
-
-footer{
-    & .wrapper{
-    background-color: $color-footer;
-    color: $color-font-foot;
-
-    }
-    & h2{
-    font-size: 1.2rem;
-    font-family: 'Shrikhand';
-    margin: 0 8% 20px 8%;
-    padding-top: 20px;
-    }
-    & li{
-        padding: 10px 8%;
-    }
-    & a{
-        color: $color-font-foot;
-        & i{
-            font-size: 0.8rem;
-            margin-right: 3%;
-        }
-        &:visited{
-            color: $color-font-foot;
-        }
     }
 }
