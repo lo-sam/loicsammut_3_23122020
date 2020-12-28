@@ -600,9 +600,7 @@ section h1 {
 }
 
 .carteResto .like {
-  position: absolute;
-  top: 200px;
-  left: -10000%;
+  display: none;
 }
 
 .carteResto #like1:checked + .heart__Empty {
@@ -675,6 +673,8 @@ section h1 {
 
 .menuResto .plat__nom, .menuResto .plat__info {
   padding: 5px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menuResto .plat__prix {

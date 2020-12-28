@@ -13,9 +13,7 @@
         padding: 20px 0;
     }
     & .like{
-        position: absolute;
-        top: 200px;
-        left: -10000%;
+        display: none;
     }
     & #like1{
         &:checked + .heart__Empty{
@@ -78,6 +76,8 @@
     }
     & .plat__nom, .plat__info{
         padding: 5px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     & .plat__prix{
         float: right;
@@ -144,10 +144,10 @@
                 animation: deplaceCheck 1 linear .3s forwards;
             }
         }
+
     }
     
 }
-
 @keyframes prixAnim{
     0%{
         margin-right: 0;
