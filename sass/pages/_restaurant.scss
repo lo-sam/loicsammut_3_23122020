@@ -135,8 +135,8 @@
     
     & #entreeSelectionne1, #entreeSelectionne2, #entreeSelectionne3, #platSelectionne1,
     #platSelectionne2, #platSelectionne3, #dessertSelectionne1, #dessertSelectionne2, #dessertSelectionne3{
-        &:checked + .marginCheck, &:hover + .marginCheck{
-            & .menuResto__plat{
+        &:checked + .marginCheck{
+            & .menuResto__plat, &:hover + .marginCheck{
                 animation: prixAnim 1 linear .3s forwards;
                 box-shadow: none;
                 }
@@ -144,7 +144,6 @@
                 animation: deplaceCheck 1 linear .3s forwards;
             }
         }
-
     }
     
 }
