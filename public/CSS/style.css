@@ -657,20 +657,15 @@ section h1 {
 }
 
 .menuResto__plat {
+  z-index: 1;
   position: relative;
+  height: 55px;
   margin-bottom: 10px;
   background: #fff;
   padding: 10px 3%;
   border-radius: 15px;
   -webkit-box-shadow: 5px 5px 10px #e6e6e6;
           box-shadow: 5px 5px 10px #e6e6e6;
-}
-
-.menuResto__plat:hover, .menuResto__plat:active {
-  -webkit-animation: prixAnim 1 linear 1s;
-          animation: prixAnim 1 linear 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 .menuResto .plat__nom, .menuResto .plat__prix {
@@ -689,6 +684,67 @@ section h1 {
 
 .menuResto .valid__plat {
   background: #99E2D0;
+}
+
+.menuResto .fondVert {
+  position: absolute;
+  z-index: 0;
+  height: 75px;
+  width: 94%;
+  margin: 0 3%;
+  border-radius: 15px;
+  background: #99E2D0;
+  left: 0;
+}
+
+.menuResto .fondVert i {
+  position: absolute;
+  font-size: 1.5rem;
+  left: 87%;
+  top: 25px;
+  color: #fff;
+}
+
+.menuResto .fondVert--1 {
+  top: 134px;
+}
+
+.menuResto .fondVert--2 {
+  top: 219px;
+}
+
+.menuResto .fondVert--3 {
+  top: 304px;
+}
+
+.menuResto .fondVert--4 {
+  top: 451px;
+}
+
+.menuResto .fondVert--5 {
+  top: 536px;
+}
+
+.menuResto .fondVert--6 {
+  top: 621px;
+}
+
+.menuResto .fondVert--7 {
+  top: 768px;
+}
+
+.menuResto .fondVert--8 {
+  top: 853px;
+}
+
+.menuResto .fondVert--9 {
+  top: 938px;
+}
+
+.menuResto #entreeSelectionne1:checked + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne2:checked + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne3:checked + .marginCheck .menuResto__plat, .menuResto #platSelectionne1:checked + .marginCheck .menuResto__plat,
+.menuResto #platSelectionne2:checked + .marginCheck .menuResto__plat, .menuResto #platSelectionne3:checked + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne1:checked + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne2:checked + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne3:checked + .marginCheck .menuResto__plat {
+  -webkit-animation: prixAnim 1 linear 1s forwards;
+          animation: prixAnim 1 linear 1s forwards;
 }
 
 @-webkit-keyframes prixAnim {

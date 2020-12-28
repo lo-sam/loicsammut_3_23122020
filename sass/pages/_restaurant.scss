@@ -63,16 +63,14 @@
         }
     }
     &__plat{
+        z-index: 1;
         position: relative;
+        height: 55px;
         margin-bottom: 10px;
         background: $color-back;
         padding: 10px 3%;
         border-radius: 15px;
         box-shadow: 5px 5px 10px darken($color-back,10%);
-        &:hover, &:active{
-            animation: prixAnim 1 linear 1s;
-            animation-fill-mode: forwards;
-        }
     }
     & .plat__nom, .plat__prix{
         font-weight: bold;
@@ -88,7 +86,63 @@
     & .valid__plat{
         background: $color-ter;
     }
+    & .fondVert{
+        position: absolute;
+        z-index: 0;
+        height: 75px;
+        width: 94%;
+        margin: 0 3%;
+        border-radius: 15px;
+        background: #99E2D0;
+        left: 0;
+        & i{
+            position: absolute;
+            font-size: 1.5rem;
+            left: 87%;
+            top: 25px;
+            color: $color-back;
+        }
+        &--1{
+            top: 134px;
+        }
+        &--2{
+            top: 219px;
+        }
+        &--3{
+            top: 304px;
+        }
+        &--4{
+            top: 451px;
+        }
+        &--5{
+            top: 536px;
+        }
+        &--6{
+            top: 621px;
+        }
+        &--7{
+            top: 768px;
+        }
+        &--8{
+            top: 853px;
+
+        }
+        &--9{
+            top: 938px;
+        }
+    }
+    
+    & #entreeSelectionne1, #entreeSelectionne2, #entreeSelectionne3, #platSelectionne1,
+    #platSelectionne2, #platSelectionne3, #dessertSelectionne1, #dessertSelectionne2, #dessertSelectionne3{
+        &:checked + .marginCheck{
+            & .menuResto__plat{
+                animation: prixAnim 1 linear 1s forwards;
+                }
+        }
+    }
+    
 }
+
 @keyframes prixAnim{
     0%{
         margin-right: 0;
