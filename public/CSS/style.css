@@ -689,10 +689,11 @@ section h1 {
 .menuResto .fondVert {
   position: absolute;
   z-index: 0;
-  height: 75px;
+  height: 74px;
   width: 94%;
   margin: 0 3%;
   border-radius: 15px;
+  overflow: hidden;
   background: #99E2D0;
   left: 0;
 }
@@ -706,19 +707,19 @@ section h1 {
 }
 
 .menuResto .fondVert--1 {
-  top: 134px;
+  top: 135px;
 }
 
 .menuResto .fondVert--2 {
-  top: 219px;
+  top: 220px;
 }
 
 .menuResto .fondVert--3 {
-  top: 304px;
+  top: 305px;
 }
 
 .menuResto .fondVert--4 {
-  top: 451px;
+  top: 452px;
 }
 
 .menuResto .fondVert--5 {
@@ -730,21 +731,31 @@ section h1 {
 }
 
 .menuResto .fondVert--7 {
-  top: 768px;
+  top: 769px;
 }
 
 .menuResto .fondVert--8 {
-  top: 853px;
+  top: 854px;
 }
 
 .menuResto .fondVert--9 {
-  top: 938px;
+  top: 939px;
 }
 
-.menuResto #entreeSelectionne1:checked + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne2:checked + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne3:checked + .marginCheck .menuResto__plat, .menuResto #platSelectionne1:checked + .marginCheck .menuResto__plat,
-.menuResto #platSelectionne2:checked + .marginCheck .menuResto__plat, .menuResto #platSelectionne3:checked + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne1:checked + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne2:checked + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne3:checked + .marginCheck .menuResto__plat {
-  -webkit-animation: prixAnim 1 linear 1s forwards;
-          animation: prixAnim 1 linear 1s forwards;
+.menuResto #entreeSelectionne1:checked + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne1:hover + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne2:checked + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne2:hover + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne3:checked + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne3:hover + .marginCheck .menuResto__plat, .menuResto #platSelectionne1:checked + .marginCheck .menuResto__plat, .menuResto #platSelectionne1:hover + .marginCheck .menuResto__plat,
+.menuResto #platSelectionne2:checked + .marginCheck .menuResto__plat,
+.menuResto #platSelectionne2:hover + .marginCheck .menuResto__plat, .menuResto #platSelectionne3:checked + .marginCheck .menuResto__plat, .menuResto #platSelectionne3:hover + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne1:checked + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne1:hover + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne2:checked + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne2:hover + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne3:checked + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne3:hover + .marginCheck .menuResto__plat {
+  -webkit-animation: prixAnim 1 linear .3s forwards;
+          animation: prixAnim 1 linear .3s forwards;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.menuResto #entreeSelectionne1:checked + .marginCheck .fondVert i, .menuResto #entreeSelectionne1:hover + .marginCheck .fondVert i, .menuResto #entreeSelectionne2:checked + .marginCheck .fondVert i, .menuResto #entreeSelectionne2:hover + .marginCheck .fondVert i, .menuResto #entreeSelectionne3:checked + .marginCheck .fondVert i, .menuResto #entreeSelectionne3:hover + .marginCheck .fondVert i, .menuResto #platSelectionne1:checked + .marginCheck .fondVert i, .menuResto #platSelectionne1:hover + .marginCheck .fondVert i,
+.menuResto #platSelectionne2:checked + .marginCheck .fondVert i,
+.menuResto #platSelectionne2:hover + .marginCheck .fondVert i, .menuResto #platSelectionne3:checked + .marginCheck .fondVert i, .menuResto #platSelectionne3:hover + .marginCheck .fondVert i, .menuResto #dessertSelectionne1:checked + .marginCheck .fondVert i, .menuResto #dessertSelectionne1:hover + .marginCheck .fondVert i, .menuResto #dessertSelectionne2:checked + .marginCheck .fondVert i, .menuResto #dessertSelectionne2:hover + .marginCheck .fondVert i, .menuResto #dessertSelectionne3:checked + .marginCheck .fondVert i, .menuResto #dessertSelectionne3:hover + .marginCheck .fondVert i {
+  -webkit-animation: deplaceCheck 1 linear .3s forwards;
+          animation: deplaceCheck 1 linear .3s forwards;
 }
 
 @-webkit-keyframes prixAnim {
@@ -766,6 +777,32 @@ section h1 {
   100% {
     margin-right: 20%;
     border-radius: 15px 0 0 15px;
+  }
+}
+
+@-webkit-keyframes deplaceCheck {
+  0% {
+    left: 100%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    left: 87%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes deplaceCheck {
+  0% {
+    left: 100%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    left: 87%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=style.css.map */
