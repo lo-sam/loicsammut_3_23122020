@@ -13,3 +13,8 @@ body{
     margin-right: auto;
     background-color: darken($color-back, 5%);
 }
+
+a{
+    text-decoration: none;
+    color: $color-font-txt;
+}
