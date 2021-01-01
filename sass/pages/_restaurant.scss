@@ -64,6 +64,9 @@
             bottom: -2px;
         }
     }
+    & .vignette_plat{
+        position: relative;
+    }
     &__plat{
         z-index: 1;
         position: relative;
@@ -92,14 +95,13 @@
     }
     & .fondVert{
         position: absolute;
-        z-index: 0;
         height: 74px;
-        width: 94%;
-        margin: 0 3%;
+        width: 100%;
         border-radius: 15px;
         overflow: hidden;
         background: #99E2D0;
         left: 0;
+        top: 0;
         & i{
             position: absolute;
             font-size: 1.5rem;
@@ -107,37 +109,8 @@
             top: 25px;
             color: $color-back;
         }
-        &--1{
-            top: 147px;
-        }
-        &--2{
-            top: 232px;
-        }
-        &--3{
-            top: 317px;
-        }
-        &--4{
-            top: 464px;
-        }
-        &--5{
-            top: 549px;
-        }
-        &--6{
-            top: 634px;
-        }
-        &--7{
-            top: 781px;
-        }
-        &--8{
-            top: 866px;
-
-        }
-        &--9{
-            top: 951px;
-        }
     }
-    
-    & #entreeSelectionne1, #entreeSelectionne2, #entreeSelectionne3, #platSelectionne1,
+    & #entreeSelectionne1, #entreeSelectionne2, #entreeSelectionne3, #entreeSelectionne4,#platSelectionne1,
     #platSelectionne2, #platSelectionne3, #dessertSelectionne1, #dessertSelectionne2, #dessertSelectionne3{
         &:checked + .marginCheck {
             & .menuResto__plat{
@@ -153,11 +126,11 @@
 
 @keyframes prixAnim{
     0%{
-        margin-right: 0;
+        width: 94%;
         border-radius: 15px;
     }
     100%{
-        margin-right: 20%;
+        width: 75%;
         border-radius: 15px 0 0 15px;
     }
 }

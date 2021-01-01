@@ -658,6 +658,10 @@ section h1 {
   bottom: -2px;
 }
 
+.menuResto .vignette_plat {
+  position: relative;
+}
+
 .menuResto__plat {
   z-index: 1;
   position: relative;
@@ -692,14 +696,13 @@ section h1 {
 
 .menuResto .fondVert {
   position: absolute;
-  z-index: 0;
   height: 74px;
-  width: 94%;
-  margin: 0 3%;
+  width: 100%;
   border-radius: 15px;
   overflow: hidden;
   background: #99E2D0;
   left: 0;
+  top: 0;
 }
 
 .menuResto .fondVert i {
@@ -710,43 +713,7 @@ section h1 {
   color: #fff;
 }
 
-.menuResto .fondVert--1 {
-  top: 147px;
-}
-
-.menuResto .fondVert--2 {
-  top: 232px;
-}
-
-.menuResto .fondVert--3 {
-  top: 317px;
-}
-
-.menuResto .fondVert--4 {
-  top: 464px;
-}
-
-.menuResto .fondVert--5 {
-  top: 549px;
-}
-
-.menuResto .fondVert--6 {
-  top: 634px;
-}
-
-.menuResto .fondVert--7 {
-  top: 781px;
-}
-
-.menuResto .fondVert--8 {
-  top: 866px;
-}
-
-.menuResto .fondVert--9 {
-  top: 951px;
-}
-
-.menuResto #entreeSelectionne1:checked + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne2:checked + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne3:checked + .marginCheck .menuResto__plat, .menuResto #platSelectionne1:checked + .marginCheck .menuResto__plat,
+.menuResto #entreeSelectionne1:checked + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne2:checked + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne3:checked + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne4:checked + .marginCheck .menuResto__plat, .menuResto #platSelectionne1:checked + .marginCheck .menuResto__plat,
 .menuResto #platSelectionne2:checked + .marginCheck .menuResto__plat, .menuResto #platSelectionne3:checked + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne1:checked + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne2:checked + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne3:checked + .marginCheck .menuResto__plat {
   -webkit-animation: prixAnim 1 linear .3s forwards;
           animation: prixAnim 1 linear .3s forwards;
@@ -754,7 +721,7 @@ section h1 {
           box-shadow: none;
 }
 
-.menuResto #entreeSelectionne1:checked + .marginCheck .fondVert i, .menuResto #entreeSelectionne2:checked + .marginCheck .fondVert i, .menuResto #entreeSelectionne3:checked + .marginCheck .fondVert i, .menuResto #platSelectionne1:checked + .marginCheck .fondVert i,
+.menuResto #entreeSelectionne1:checked + .marginCheck .fondVert i, .menuResto #entreeSelectionne2:checked + .marginCheck .fondVert i, .menuResto #entreeSelectionne3:checked + .marginCheck .fondVert i, .menuResto #entreeSelectionne4:checked + .marginCheck .fondVert i, .menuResto #platSelectionne1:checked + .marginCheck .fondVert i,
 .menuResto #platSelectionne2:checked + .marginCheck .fondVert i, .menuResto #platSelectionne3:checked + .marginCheck .fondVert i, .menuResto #dessertSelectionne1:checked + .marginCheck .fondVert i, .menuResto #dessertSelectionne2:checked + .marginCheck .fondVert i, .menuResto #dessertSelectionne3:checked + .marginCheck .fondVert i {
   -webkit-animation: deplaceCheck 1 linear .3s forwards;
           animation: deplaceCheck 1 linear .3s forwards;
@@ -762,22 +729,22 @@ section h1 {
 
 @-webkit-keyframes prixAnim {
   0% {
-    margin-right: 0;
+    width: 94%;
     border-radius: 15px;
   }
   100% {
-    margin-right: 20%;
+    width: 75%;
     border-radius: 15px 0 0 15px;
   }
 }
 
 @keyframes prixAnim {
   0% {
-    margin-right: 0;
+    width: 94%;
     border-radius: 15px;
   }
   100% {
-    margin-right: 20%;
+    width: 75%;
     border-radius: 15px 0 0 15px;
   }
 }
