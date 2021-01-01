@@ -1,16 +1,20 @@
 .photoResto{
+    position: relative;
+    height: 240px;
     object-fit: cover;
     object-position: center;
-    width: 100%;
+    width: 100%;    
 }
 .carteResto{
     position: relative;
+    background: darken($color-back, 5%);
+    top: -20px;
     padding: 0 3% 20px 3%;
     border-radius: 25px 25px 0 0;
     & .titreResto{
         font-family: 'Shrikhand';
         font-size: 1.4rem;
-        padding: 20px 0;
+        padding: 26px 0;
     }
     & .like{
         display: none;
@@ -104,32 +108,32 @@
             color: $color-back;
         }
         &--1{
-            top: 135px;
+            top: 147px;
         }
         &--2{
-            top: 220px;
+            top: 232px;
         }
         &--3{
-            top: 305px;
+            top: 317px;
         }
         &--4{
-            top: 452px;
+            top: 464px;
         }
         &--5{
-            top: 537px;
+            top: 549px;
         }
         &--6{
-            top: 622px;
+            top: 634px;
         }
         &--7{
-            top: 769px;
+            top: 781px;
         }
         &--8{
-            top: 854px;
+            top: 866px;
 
         }
         &--9{
-            top: 939px;
+            top: 951px;
         }
     }
     
@@ -166,5 +170,106 @@
     100%{
         left: 87%;
         transform: rotate(360deg);
+    }
+}
+
+.ouverture_1{
+    animation: ouverture_1 3s;
+}
+.ouverture_2{
+    animation: ouverture_2 3s;
+}
+.ouverture_3{
+    animation: ouverture_3 3s;
+}
+.ouverture_4{
+    animation: ouverture_4 3s;
+}
+.ouverture_5{
+    animation: ouverture_5 3s;
+}
+.ouverture_6{
+    animation: ouverture_6 3s;
+}
+.ouverture_7{
+    animation: ouverture_7 3s;
+}
+.ouverture_8{
+    animation: ouverture_8 3s;
+}
+.ouverture_9{
+    animation: ouverture_9 3s;
+}
+
+@keyframes ouverture_1{
+    0%{
+        transform: translatey(-60px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_2{
+    0%{
+        transform: translatey(-140px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_3{
+    0%{
+        transform: translatey(-240px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_4{
+    0%{
+        transform: translatey(-380px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_5{
+    0%{
+        transform: translatey(-480px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_6{
+    0%{
+        transform: translatey(-580px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_7{
+    0%{
+        transform: translatey(-720px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_8{
+    0%{
+        transform: translatey(-820px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_9{
+    0%{
+        transform: translatey(-920px) ;
+    }
+    100%{
+        transform: translateY(0)
     }
 }
