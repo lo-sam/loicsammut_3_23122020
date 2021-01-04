@@ -2,8 +2,29 @@
     position: relative;
     padding: 30px 5%;
     background-color: $color-back;
-    & p{
+    @include xl{
+        padding: 70px 5%;
+    }
+    .titreNav{
         font-size: 1.6rem;
         font-weight: bold;
+        @include md{
+            font-size: 1.8rem;
+        }
+        @include xl{
+            margin-bottom: 30px;
+        }
+    }
+    .listeNav{
+        @include xl{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }   
+        li{
+            @include xl{
+                width: 30%;
+            }
+        } 
     }
 }

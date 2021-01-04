@@ -7,7 +7,7 @@
     background-color: #99E2D0;
     margin: auto;
     line-height: 500px;    
-    animation: disparition 1 1s linear 3s forwards;
+    animation: disparition 1 1s linear 0.1s forwards; // une fois les test fini remplacer le 0.1s par 3s
     & .couvertAssiette{
         margin: auto;
         text-align: center;
@@ -58,8 +58,8 @@
     }
 }
 
-header .logo__accueil{
-    margin: auto;
+.indexRetour{
+        display: none;
 }
 
 .text_acc1{
@@ -67,12 +67,19 @@ header .logo__accueil{
     font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
+    @include md{
+        font-size: 2rem;
+        margin: 40px 10%;
+    }
 }
 
 .com_search{
     margin: 0 10%;
     text-align: center;
     color: lighten($color-font-txt, 50%);
+    @include md{
+        font-size: 1.2rem;
+    }
 
 }
 
@@ -83,17 +90,41 @@ section{
         font-size: 1.6rem;
         font-weight: bold;
         margin-bottom: 25px;
+        @include md{
+            font-size: 1.8rem;
+        }
+        @include xl{
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.restoLigne{
+    @include xl{
+        display: flex;
+        justify-content: space-around;
     }
 }
 
 .index_carte1{
-    width: auto;
+    width: 100%;
     height: 250px;
     position: relative;
     margin-bottom: 20px;
     background-color: $color-back;
     border-radius: 25px;
     box-shadow: 5px 5px 10px darken($color-back,10%);
+    @include md{
+        height: 350px;
+    }
+    @include lg{
+        height: 400px;
+    }
+    @include xl{
+        width: 45%;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
     & img{
         object-fit: cover;
         object-position: center;
@@ -101,19 +132,22 @@ section{
         height: 170px;
         border-radius: 25px 25px 0 0;
         margin: 0 auto;
-    }
-    & h5{
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin: 10px;
+        @include md{
+            height: 250px;
+        }
+        @include lg{
+            height: 300px;
+        }
     }
     & .lieu{
         margin: 0 10px;
+        @include md{
+            font-size: 1.2rem;
+            margin: 0 20px;
+        }
     }
     & .like{
-        position: absolute;
-        top: 200px;
-        left: -10000%;
+        display: none;
     }
     & #like1{
         &:checked + .heart__Empty{
@@ -153,6 +187,14 @@ section{
         position: absolute;
         left: 85%;       
         top: 200px;
+        @include md{
+            top: 280px;
+            font-size: 2.5rem;
+        }
+        @include lg{
+            top: 335px;
+            left: 90%;
+        }
         &__Full{
             color: $color-prim;
         }
@@ -174,6 +216,16 @@ section{
         top: 20px;
         left: 70%;
         animation: newResto 3s infinite;
+        @include md{
+            left: 81%;
+            padding: 2%;
+        }
+        @include lg{
+            left: 86%;
+        }
+        @include xl{
+            left: 80%;
+        }
     }
 }
 

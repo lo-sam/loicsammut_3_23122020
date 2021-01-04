@@ -8,16 +8,47 @@ footer{
     font-size: 1.2rem;
     font-family: 'Shrikhand';
     margin: 0 8% 20px 8%;
-    padding-top: 20px;
+    padding: 2% 4%;
+    @include md{
+        font-size: 1.8rem;
+        margin-left: 2%;
+    }
+
+    }
+    & ul{
+        padding: 2% 4%;
+        @include md{
+            display: flex;
+            justify-content: space-around;
+        }
     }
     & li{
         padding: 10px 8%;
+        @include md{
+            font-size: 1.2rem;
+            padding: 10px 1%;
+            width: max-content;
+        }
     }
     & a{
         color: $color-font-foot;
+        display: flex;
         & i{
             font-size: 0.8rem;
             margin-right: 3%;
+            @include md{
+                font-size: 1rem;
+                margin: 0;
+            }
+            @include xl{
+                font-size: 1.3rem;
+            }
+        }
+        & p{                  
+        @include md{
+                font-size: 1.3rem;
+                margin-left: 8px;
+            }
         }
         &:visited{
             color: $color-font-foot;

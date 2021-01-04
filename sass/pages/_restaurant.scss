@@ -4,7 +4,11 @@
     object-fit: cover;
     object-position: center;
     width: 100%;    
+    @include md{
+        height: 300px;
+    }
 }
+
 .carteResto{
     position: relative;
     background: darken($color-back, 5%);
@@ -15,6 +19,10 @@
         font-family: 'Shrikhand';
         font-size: 1.4rem;
         padding: 20px 0;
+        @include md{
+            font-size: 3rem;
+            padding: 30px 0 0 0;
+        }
     }
     & .like{
         display: none;
@@ -33,6 +41,10 @@
         position: absolute;
         left: 85%;       
         top: 18px;
+        @include md{
+            top: 30px;
+            font-size: 3.5rem;
+        }
         &__Full{
             color: $color-prim;
         }
@@ -45,7 +57,6 @@
             }
         }
     }
-
 }
 
 .menuResto{
@@ -55,6 +66,9 @@
         margin-bottom: 20px;
         margin: 40px 0 10px 0;
         text-transform: uppercase;
+        @include md{
+            font-size: 1.5rem;
+        }
         &::after{
             content: "";
             display: block;
@@ -62,6 +76,9 @@
             width: 12%;
             position: relative;
             bottom: -2px;
+            @include md{
+                width: 9%;
+            }
         }
     }
     & .vignette_plat{
@@ -76,6 +93,9 @@
         padding: 10px 3%;
         border-radius: 15px;
         box-shadow: 5px 5px 10px darken($color-back,10%);
+        @include md{
+            height: 70px;
+        }
     }
     & .plat__nom, .plat__prix{
         font-weight: bold;
@@ -85,10 +105,16 @@
         padding: 5px 0;
         overflow: hidden;
         text-overflow: ellipsis;
+        @include md{
+            font-size: 1.5rem;
+        }
     }
     & .plat__prix{
         float: right;
         padding-top: 8px;
+        @include md{
+            font-size: 1.5rem;
+        }
     }
     & .valid__plat{
         background: $color-ter;
@@ -102,12 +128,24 @@
         background: #99E2D0;
         left: 0;
         top: 0;
+        @include md{
+             height: 90px;
+        }
         & i{
             position: absolute;
             font-size: 1.5rem;
             left: 87%;
             top: 25px;
             color: $color-back;
+            @include md{
+                font-size: 3rem;
+                margin-left: 2%;
+                left: 90%;
+            }
+            @include lg{
+                top: 20px;
+                font-size: 3.5rem;
+            }
         }
     }
     & #entreeSelectionne1, #entreeSelectionne2, #entreeSelectionne3, #entreeSelectionne4,#platSelectionne1,
@@ -116,9 +154,15 @@
             & .menuResto__plat{
                 animation: prixAnim 1 linear .3s forwards;
                 box-shadow: none;
+                @include md{
+                    animation: prixAnim-md 1 linear .3s forwards;
+                }
                 }
             & .fondVert i{
                 animation: deplaceCheck 1 linear .3s forwards;
+               /* @include md{
+                    animation: deplaceCheck-md 1 linear .3s forwards;    
+                }*/
             }
         }
     }
@@ -135,6 +179,18 @@
     }
 }
 
+@keyframes prixAnim-md{
+    0%{
+        width: 94%;
+        border-radius: 15px;
+    }
+    100%{
+        width: 80%;
+        border-radius: 15px 0 0 15px;
+    }
+}
+
+
 @keyframes deplaceCheck{
     0%{
         left: 100%;
@@ -145,6 +201,18 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes deplaceCheck-md{
+    0%{
+        left: 100%;
+        transform: rotate(0deg);
+    }
+    100%{
+        left: 89%;
+        transform: rotate(360deg);
+    }
+}
+
 
 .ouverture_1{
     animation: ouverture_1 3s;
