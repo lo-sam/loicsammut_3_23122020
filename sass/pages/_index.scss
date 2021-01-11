@@ -39,25 +39,6 @@
     }
 }
 
-@keyframes spin{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-} 
-
-@keyframes disparition{
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        z-index: -1;
-    }
-}
-
 .indexRetour{
         display: none;
 }
@@ -226,48 +207,5 @@ section{
         @include xl{
             left: 80%;
         }
-    }
-}
-
-@keyframes likeAnime{
-    0% {
-        transform: scale(1);
-    }
-    
-    25%{
-        transform: scale(1.2);
-    }
-    50%{
-        transform: scale(1);
-    }
-    75%{
-        transform: scale(1.2);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-
-@keyframes newResto{
-    0%{
-        transform: rotate(0deg);
-    }
-    10%{
-        transform: rotate(5deg);
-    }
-    20%{
-        transform: rotate(-5deg);
-    }
-    30%{
-        transform: rotate(5deg);
-    }
-    40%{
-        transform: rotate(-5deg);
-    }
-    50%{
-        transform: rotate(0deg);
-    }    
-    100%{
-        transform: rotate(0deg);
     }
 }

@@ -1,0 +1,233 @@
+// Animation du spinloader
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} 
+
+@keyframes disparition{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+
+// Animation du like
+
+@keyframes likeAnime{
+    0% {
+        transform: scale(1);
+    }
+    
+    25%{
+        transform: scale(1.2);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+// Animation nouveau restaurant
+
+@keyframes newResto{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(5deg);
+    }
+    20%{
+        transform: rotate(-5deg);
+    }
+    30%{
+        transform: rotate(5deg);
+    }
+    40%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }    
+    100%{
+        transform: rotate(0deg);
+    }
+
+
+
+// Animation plat sélectionné
+
+@keyframes prixAnim{
+    0%{
+        width: 94%;
+        border-radius: 15px;
+    }
+    100%{
+        width: 75%;
+        border-radius: 15px 0 0 15px;
+    }
+}
+
+@keyframes prixAnim-md{
+    0%{
+        width: 94%;
+        border-radius: 15px;
+    }
+    100%{
+        width: 80%;
+        border-radius: 15px 0 0 15px;
+    }
+}
+
+@keyframes prixAnim-xl{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    25%{
+        transform: scale(2);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes deplaceCheck{
+    0%{
+        left: 100%;
+        transform: rotate(0deg);
+    }
+    100%{
+        left: 87%;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes deplaceCheck-md{
+    0%{
+        left: 100%;
+        transform: rotate(0deg);
+    }
+    100%{
+        left: 89%;
+        transform: rotate(360deg);
+    }
+}
+
+
+// Animation à l'ouverture des pages restaurants
+
+@keyframes ouverture_1{
+    0%{
+        transform: translatey(-60px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_2{
+    0%{
+        transform: translatey(-140px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_3{
+    0%{
+        transform: translatey(-240px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_4{
+    0%{
+        transform: translatey(-380px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_5{
+    0%{
+        transform: translatey(-480px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_6{
+    0%{
+        transform: translatey(-580px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_7{
+    0%{
+        transform: translatey(-720px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_8{
+    0%{
+        transform: translatey(-820px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+@keyframes ouverture_9{
+    0%{
+        transform: translatey(-920px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+
+@keyframes ouverturexl{
+    0%{
+        transform: translateX(-1000px);
+    }
+    25%{
+        transform: translateX(10px);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    75%{
+        transform: translateX(10px);
+
+    }
+    100%{
+        transform: translateX(0px);
+
+    }
+}

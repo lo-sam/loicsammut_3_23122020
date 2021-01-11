@@ -7,6 +7,10 @@
     @include md{
         height: 300px;
     }
+    @include xl{
+        border-radius: 0 0 25px 25px;
+        box-shadow: 0px 10px 10px $color-ter;
+    }
 }
 
 .carteResto{
@@ -15,6 +19,10 @@
     top: -20px;
     padding: 0 3% 20px 3%;
     border-radius: 25px 25px 0 0;
+    @include xl{
+        top: 10px;
+        border-radius: 0 0 0 0;
+    }
     & .titreResto{
         font-family: 'Shrikhand';
         font-size: 1.4rem;
@@ -22,6 +30,9 @@
         @include md{
             font-size: 3rem;
             padding: 30px 0 0 0;
+        }
+        @include xl{
+            font-size: 1.8rem;
         }
     }
     & .like{
@@ -44,6 +55,10 @@
         @include md{
             top: 30px;
             font-size: 3.5rem;
+        }
+        @include xl{
+            font-size: 2rem;
+            left: 90%;
         }
         &__Full{
             color: $color-prim;
@@ -79,10 +94,17 @@
             @include md{
                 width: 9%;
             }
+            @include xl{
+                width: 45px;
+            }
         }
     }
     & .vignette_plat{
         position: relative;
+        @include xl{
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;        }
     }
     &__plat{
         z-index: 1;
@@ -131,6 +153,10 @@
         @include md{
              height: 90px;
         }
+        @include xl{
+            background: darken($color-back, 5%);
+            margin-left: 120px;
+        }
         & i{
             position: absolute;
             font-size: 1.5rem;
@@ -146,6 +172,13 @@
                 top: 20px;
                 font-size: 3.5rem;
             }
+            @include xl{
+                color: $color-ter;
+                left: 80%;
+                top: 30px;
+                font-size: 2rem;
+                opacity: 0;
+            }
         }
     }
     & #entreeSelectionne1, #entreeSelectionne2, #entreeSelectionne3, #entreeSelectionne4,#platSelectionne1,
@@ -157,62 +190,21 @@
                 @include md{
                     animation: prixAnim-md 1 linear .3s forwards;
                 }
+                @include xl{
+                    animation: none;
+                    box-shadow: 5px 5px 10px darken($color-back,10%);
                 }
+            }
             & .fondVert i{
                 animation: deplaceCheck 1 linear .3s forwards;
-               /* @include md{
-                    animation: deplaceCheck-md 1 linear .3s forwards;    
-                }*/
+                @include xl{
+                    animation: prixAnim-xl 1 linear .3s forwards;
+
+                }
             }
         }
     }
 }
-
-@keyframes prixAnim{
-    0%{
-        width: 94%;
-        border-radius: 15px;
-    }
-    100%{
-        width: 75%;
-        border-radius: 15px 0 0 15px;
-    }
-}
-
-@keyframes prixAnim-md{
-    0%{
-        width: 94%;
-        border-radius: 15px;
-    }
-    100%{
-        width: 80%;
-        border-radius: 15px 0 0 15px;
-    }
-}
-
-
-@keyframes deplaceCheck{
-    0%{
-        left: 100%;
-        transform: rotate(0deg);
-    }
-    100%{
-        left: 87%;
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes deplaceCheck-md{
-    0%{
-        left: 100%;
-        transform: rotate(0deg);
-    }
-    100%{
-        left: 89%;
-        transform: rotate(360deg);
-    }
-}
-
 
 .ouverture_1{
     animation: ouverture_1 3s;
@@ -242,75 +234,9 @@
     animation: ouverture_9 3s;
 }
 
-@keyframes ouverture_1{
-    0%{
-        transform: translatey(-60px) ;
-    }
-    100%{
-        transform: translateY(0)
+.ouverture_1, .ouverture_2, .ouverture_3, .ouverture_4, .ouverture_5, .ouverture_6, .ouverture_7, .ouverture_8, .ouverture_9{
+    @include xl{
+        animation: ouverturexl 2.5s;
     }
 }
-@keyframes ouverture_2{
-    0%{
-        transform: translatey(-140px) ;
-    }
-    100%{
-        transform: translateY(0)
-    }
-}
-@keyframes ouverture_3{
-    0%{
-        transform: translatey(-240px) ;
-    }
-    100%{
-        transform: translateY(0)
-    }
-}
-@keyframes ouverture_4{
-    0%{
-        transform: translatey(-380px) ;
-    }
-    100%{
-        transform: translateY(0)
-    }
-}
-@keyframes ouverture_5{
-    0%{
-        transform: translatey(-480px) ;
-    }
-    100%{
-        transform: translateY(0)
-    }
-}
-@keyframes ouverture_6{
-    0%{
-        transform: translatey(-580px) ;
-    }
-    100%{
-        transform: translateY(0)
-    }
-}
-@keyframes ouverture_7{
-    0%{
-        transform: translatey(-720px) ;
-    }
-    100%{
-        transform: translateY(0)
-    }
-}
-@keyframes ouverture_8{
-    0%{
-        transform: translatey(-820px) ;
-    }
-    100%{
-        transform: translateY(0)
-    }
-}
-@keyframes ouverture_9{
-    0%{
-        transform: translatey(-920px) ;
-    }
-    100%{
-        transform: translateY(0)
-    }
-}
+
