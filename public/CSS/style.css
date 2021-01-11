@@ -496,22 +496,12 @@
   0% {
     -webkit-transform: translateX(-1000px);
             transform: translateX(-1000px);
-  }
-  20% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
-  }
-  40% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
-  }
-  60% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    opacity: 0;
   }
   80% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    opacity: 1;
   }
   100% {
     -webkit-transform: translateX(0px);
@@ -523,26 +513,42 @@
   0% {
     -webkit-transform: translateX(-1000px);
             transform: translateX(-1000px);
-  }
-  20% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
-  }
-  40% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
-  }
-  60% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    opacity: 0;
   }
   80% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    opacity: 1;
   }
   100% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes ouvertureMenu {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes ouvertureMenu {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -1663,8 +1669,15 @@ section h1 {
 
 @media (min-width: 1200px) {
   .ouverture_1, .ouverture_2, .ouverture_3, .ouverture_4, .ouverture_5, .ouverture_6, .ouverture_7, .ouverture_8, .ouverture_9 {
-    -webkit-animation: ouverturexl ease-in-out 2.5s;
-            animation: ouverturexl ease-in-out 2.5s;
+    -webkit-animation: ouverturexl 2.5s ease-in-out;
+            animation: ouverturexl 2.5s ease-in-out;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menuResto__titre {
+    -webkit-animation: ouvertureMenu 2.5s ease-in-out;
+            animation: ouvertureMenu 2.5s ease-in-out;
   }
 }
 /*# sourceMappingURL=style.css.map */
