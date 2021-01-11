@@ -236,7 +236,7 @@
 
 .ouverture_1, .ouverture_2, .ouverture_3, .ouverture_4, .ouverture_5, .ouverture_6, .ouverture_7, .ouverture_8, .ouverture_9{
     @include xl{
-        animation: ouverturexl 2.5s;
+        animation: ouverturexl ease-in-out 2.5s;
     }
 }
 
