@@ -26,6 +26,9 @@ h1{
     @include md{
         font-size: 4.4rem;
     }
+    @include xl{
+        font-size: 7.5rem;
+    }
 }
 
 h5{
