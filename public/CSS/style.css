@@ -719,7 +719,7 @@ h5 {
 
 .barreRecherche form input {
   border: none;
-  width: 100%;
+  width: 90%;
   font-size: 1.2rem;
   font-weight: bold;
   background-color: #d9d9d9;
@@ -1527,6 +1527,7 @@ section h1 {
 
 .menuResto .plat__nom, .menuResto .plat__info {
   padding: 5px 0;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }

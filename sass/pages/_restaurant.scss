@@ -124,6 +124,7 @@
     }
     & .plat__nom, .plat__info{
         padding: 5px 0;
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         @include md{
