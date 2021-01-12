@@ -4,23 +4,23 @@
     height: 100%;
     width: 100%;
     z-index: 2;
-    background-color: #99E2D0;
+    background-color: $color-ter;
     margin: auto;
     line-height: 500px;    
-    animation: disparition 1 1s linear 0.1s forwards; // une fois les test fini remplacer le 0.1s par 3s
-    & .couvertAssiette{
+    animation: disparition 1 1s linear 3s forwards; 
+    .couvertAssiette{
         margin: auto;
         text-align: center;
     }
-    & .couvert{
+    .couvert{
         height: 60px;
     }
-    & .loader-quart{
+    .loader-quart{
         width: 50px;
         height: 50px;
         display: inline-block;
         border-radius: 50px;
-        border: 6px solid #9256dc6e;
+        border: 6px solid lighten($color: $color-sec, $amount: 10%);
         position: relative;
         &::after{
             content: "";
@@ -31,8 +31,8 @@
             bottom: -6px;
             border-radius: 50px;
             border: 6px solid transparent;
-            border-top-color:#9356DC;
-            border-bottom-color:  #9356DC;
+            border-top-color: $color-sec;
+            border-bottom-color: $color-sec;
             animation: spin .5s infinite ease ;
         
         }
@@ -67,7 +67,7 @@
 section{
     margin: 50px auto 0 auto;
     padding: 4%;
-    & h1{
+    h1{
         font-size: 1.6rem;
         font-weight: bold;
         margin-bottom: 25px;
@@ -106,7 +106,7 @@ section{
         margin-right: 0;
         margin-bottom: 40px;
     }
-    & img{
+    img{
         object-fit: cover;
         object-position: center;
         width: 100%;
@@ -120,17 +120,17 @@ section{
             height: 300px;
         }
     }
-    & .lieu{
+    .lieu{
         margin: 0 10px;
         @include md{
             font-size: 1.2rem;
             margin: 0 20px;
         }
     }
-    & .like{
+    .like{
         display: none;
     }
-    & #like1{
+    #like1{
         &:checked + .heart__Empty{
             z-index: 0;
             & + .heart__Full{
@@ -138,7 +138,7 @@ section{
             }
         }
     }
-    & #like2{
+    #like2{
         &:checked + .heart__Empty{
             z-index: 0;
             & + .heart__Full{
@@ -146,7 +146,7 @@ section{
             }
         }
     }
-    & #like3{
+    #like3{
         &:checked + .heart__Empty{
             z-index: 0;
             & + .heart__Full{
@@ -154,7 +154,7 @@ section{
             }
         }
     }
-    & #like4{
+    #like4{
         &:checked + .heart__Empty{
             z-index: 0;
             & + .heart__Full{
@@ -162,7 +162,7 @@ section{
             }
         }
     }
-    & .heart{
+    .heart{
         cursor: pointer;
         font-size: 1.4rem;
         position: absolute;
@@ -188,7 +188,7 @@ section{
             }
         }
     }
-    & .new{
+    .new{
         background-color: $color-ter;
         color: darken($color-ter, 40%);
         font-weight: bold;

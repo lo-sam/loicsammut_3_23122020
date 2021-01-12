@@ -45,7 +45,7 @@
             width: 100%;
             margin: 0;
         }
-        & p{
+        p{
             margin: auto;
             color: $color-font-txt;
             font-size: 1.1rem;
@@ -64,7 +64,7 @@
                 color: $color-prim;
             }
         }
-        & i{
+        i{
             margin: auto 0 auto 50px;
             color: lighten($color-font-txt, 50%);
             font-size: 1.5rem;
