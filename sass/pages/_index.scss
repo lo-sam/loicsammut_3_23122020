@@ -11,9 +11,15 @@
     .couvertAssiette{
         margin: auto;
         text-align: center;
+        @include xl{
+            margin-top: 200px;
+        }
     }
     .couvert{
         height: 60px;
+        @include xl{
+            height: 220px;
+        }
     }
     .loader-quart{
         width: 50px;
@@ -22,6 +28,11 @@
         border-radius: 50px;
         border: 6px solid lighten($color: $color-sec, $amount: 10%);
         position: relative;
+        @include xl{
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+        }
         &::after{
             content: "";
             position: absolute;
@@ -34,6 +45,9 @@
             border-top-color: $color-sec;
             border-bottom-color: $color-sec;
             animation: spin .5s infinite ease ;
+            @include xl{
+                border-radius: 200px;
+            }
         
         }
     }
@@ -45,9 +59,10 @@
 
 .text_acc1{
     margin: 40px 15% 20px 15%;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
+    font-family: 'roboto';
     @include md{
         font-size: 2rem;
         margin: 40px 10%;
@@ -58,6 +73,7 @@
     margin: 0 10%;
     text-align: center;
     color: lighten($color-font-txt, 50%);
+    font-weight: 100;
     @include md{
         font-size: 1.2rem;
     }
@@ -67,10 +83,11 @@
 section{
     margin: 50px auto 0 auto;
     padding: 4%;
-    h1{
-        font-size: 1.6rem;
+    h2{
+        font-size: 1.4rem;
         font-weight: bold;
         margin-bottom: 25px;
+        font-family: 'roboto';
         @include md{
             font-size: 1.8rem;
         }
@@ -122,6 +139,7 @@ section{
     }
     .lieu{
         margin: 0 10px;
+        font-weight: 100;
         @include md{
             font-size: 1.2rem;
             margin: 0 20px;
@@ -174,10 +192,13 @@ section{
         }
         @include lg{
             top: 335px;
-            left: 90%;
         }
         &__Full{
-            color: $color-prim;
+            color: transparent;
+            background: linear-gradient(70deg, lighten($color-sec, 5%), lighten($color-prim, 5%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         &__Empty{
             color: $color-font-com;
@@ -191,11 +212,11 @@ section{
     .new{
         background-color: $color-ter;
         color: darken($color-ter, 40%);
-        font-weight: bold;
-        padding: 3%;
+        padding: 6px 3%;
+        font-size: 0.9rem;
         position: absolute;
         top: 20px;
-        left: 70%;
+        left: 75%;
         animation: newResto 3s infinite;
         @include md{
             left: 81%;

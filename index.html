@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/CSS/style.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="public/CSS/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/a650986bb4.js" crossorigin="anonymous"></script>
     <title>OhMyFood</title>
 </head>
 <body>
 <!-- LOADING SPINNER -->
 
-<section class="loadingSpinner">
+<div class="loadingSpinner">
     <div class="couvertAssiette">
     <img src="public/Img/fourchette.png" class="couvert" alt="fourchette">
     <span class="loader-quart"></span>
     <img src="public/Img/couteau.png" class="couvert" alt="couteau">
     </div>
-</section>
+</div>
 
 
 
@@ -34,7 +34,7 @@
 
 <!-- RECHERCHE -->
     <div class="barreRecherche">
-    <form method="POST" action="">
+    <form method="POST" action="#">
       <!-- <div class="recherche">--> 
         <label for="ville"><i class="fas fa-map-marker-alt"></i></label>
       <p>  <input type="search" name="ville" value="Paris, Belleville" id="ville"></p>
@@ -51,38 +51,38 @@
     <nav class="fonction">
         <p class="titreNav">Fonctionnement</p>
         <ul class="listeNav">
-            <li><button class="btn btn__nav"><div class="btn_chiffre">1</div><i class="fas fa-mobile-alt"></i><p>Choisissez un restaurant</p></button></li>
-            <li><button class="btn btn__nav"><div class="btn_chiffre">2</div><i class="fas fa-bars"></i><p>Composez votre menu</p></button></li>
-            <li><button class="btn btn__nav"><div class="btn_chiffre">3</div><i class="fas fa-store"></i><p>Dégustez au restaurant</p></button></li>
+            <li><div class="btn btn__nav"><div class="btn_chiffre">1</div><i class="fas fa-mobile-alt"></i><p>Choisissez un restaurant</p></div></li>
+            <li><div class="btn btn__nav"><div class="btn_chiffre">2</div><i class="fas fa-bars"></i><p>Composez votre menu</p></div></li>
+            <li><div class="btn btn__nav"><div class="btn_chiffre">3</div><i class="fas fa-store"></i><p>Dégustez au restaurant</p></div></li>
         </ul>
     </nav>
 
 
 <!-- Section Restaurants-->
     <section>
-        <h1>Restaurants</h1>
+        <h2>Restaurants</h2>
         <article class="restoLigne">
             <div class="index_carte1">
                 <a class="lienResto" href="la_palette_du_gout.html">
                     <p class="new">Nouveau</p>
                     <img src="./public/Img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'un plat">
-                    <h5>La palette du goût</h5>
-                    <input type="checkbox" class="like" id="like1">
-                    <label for= "like1" class="heart heart__Empty heart--1"><i class="far fa-heart"></i></label>
-                    <label for="like1" class="heart heart__Full"><i class="fas fa-heart"></i></label>
                     <p class="lieu">Ménilmontant</p>
                 </a>
+                <h3>La palette du goût</h3>
+                <input type="checkbox" class="like" id="like1">
+                <label for= "like1" class="heart heart__Empty heart--1"><i class="far fa-heart"></i></label>
+                <label for="like1" class="heart heart__Full"><i class="fas fa-heart"></i></label>
             </div>
             <div class="index_carte1">
                 <a class="lienResto"  href="la_note_enchantee.html">
                     <p class="new">Nouveau</p>
                     <img src="./public/Img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo d'un plat">
-                    <h5>La note enchantée</h5>
-                    <input type="checkbox" class="like" id="like2">
-                    <label for= "like2" class="heart heart__Empty heart--2"><i class="far fa-heart"></i></label>
-                    <label for="like2" class="heart heart__Full heart--2"><i class="fas fa-heart"></i></label> 
+                    <h3>La note enchantée</h3>
                     <p class="lieu">Charonne</p>
                 </a>
+                <input type="checkbox" class="like" id="like2">
+                <label for= "like2" class="heart heart__Empty heart--2"><i class="far fa-heart"></i></label>
+                <label for="like2" class="heart heart__Full heart--2"><i class="fas fa-heart"></i></label> 
             </div>
         </article>
         <article class="restoLigne">
@@ -90,23 +90,23 @@
                 <a class="lienResto"  href="a_la_francaise.html">
                     <p class="new">Nouveau</p>
                     <img src="./public/Img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg " alt="photo d'un plat">
-                    <h5>À la française</h5>
-                    <input type="checkbox" class="like" id="like3">
-                    <label for= "like3" class="heart heart__Empty heart--3"><i class="far fa-heart"></i></label>
-                    <label for="like3" class="heart heart__Full heart--3"><i class="fas fa-heart"></i></label> 
+                    <h3>À la française</h3>
                     <p class="lieu">Cité Rouge</p>
                 </a>
+                <input type="checkbox" class="like" id="like3">
+                <label for= "like3" class="heart heart__Empty heart--3"><i class="far fa-heart"></i></label>
+                <label for="like3" class="heart heart__Full heart--3"><i class="fas fa-heart"></i></label> 
             </div>
             <div class="index_carte1">
                 <a class="lienResto"  href="le_delice_des_sens.html">
                     <p class="new">Nouveau</p>
                     <img src="./public/Img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo d'un plat">
-                    <h5>Le délice des sens</h5>
-                    <input type="checkbox" class="like" id="like4">
-                    <label for= "like4" class="heart heart__Empty heart--4"><i class="far fa-heart"></i></label>
-                    <label for="like4" class="heart heart__Full heart--4"><i class="fas fa-heart"></i></label> 
+                    <h3>Le délice des sens</h3>
                     <p class="lieu">Folie-Méricourt</p>
                 </a>
+                <input type="checkbox" class="like" id="like4">
+                <label for= "like4" class="heart heart__Empty heart--4"><i class="far fa-heart"></i></label>
+                <label for="like4" class="heart heart__Full heart--4"><i class="fas fa-heart"></i></label> 
             </div>
         </article>
     </section>
@@ -117,7 +117,7 @@
 <!-- PIED DE PAGE -->
 <footer>
     <div class="wrapper">
-    <div><h2 class="footTitle">ohmyfood</h2></div>
+    <div><h3 class="footTitle">ohmyfood</h3></div>
     <ul>
         <li><a href="index.html"><i class="fas fa-utensils"></i><p>Proposer un restaurant</p></a></li>
         <li><a href="index.html"><i class="fas fa-hands-helping"></i><p>Devenir partenaire</p></a></li>

@@ -8,31 +8,34 @@
         height: 300px;
     }
     @include xl{
-        border-radius: 0 0 25px 25px;
-        box-shadow: 0px 10px 10px $color-ter;
+        border-radius: 25px 25px 0 0;
     }
 }
 
 .carteResto{
     position: relative;
     background: darken($color-back, 5%);
-    top: -20px;
+    top: -35px;
     padding: 0 3% 20px 3%;
+    margin-bottom: -35px;
     border-radius: 25px 25px 0 0;
+    @include md{
+        top: -45px;
+    }
     @include xl{
-        top: 10px;
+        top: -25px;
         border-radius: 0 0 0 0;
     }
     .titreResto{
         font-family: 'Shrikhand';
-        font-size: 1.4rem;
-        padding: 20px 0;
+        font-size: 1.8rem;
+        padding: 40px 0 20px 0;
         @include md{
             font-size: 3rem;
-            padding: 30px 0 0 0;
+            padding: 60px 0 0 0;
         }
         @include xl{
-            font-size: 1.8rem;
+            font-size: 3rem;
         }
     }
     .like{
@@ -51,17 +54,21 @@
         font-size: 1.4rem;
         position: absolute;
         left: 85%;       
-        top: 18px;
+        top: 40px;
         @include md{
-            top: 30px;
+            top: 50px;
             font-size: 3.5rem;
         }
         @include xl{
-            font-size: 2rem;
+            font-size: 3rem;
             left: 90%;
         }
         &__Full{
-            color: $color-prim;
+            color: transparent;
+            background: linear-gradient(70deg, lighten($color-sec, 5%), lighten($color-prim, 5%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         &__Empty{
             color: $color-font-com;
@@ -100,14 +107,17 @@
     }
     .vignette_plat{
         position: relative;
+        display: block;
         @include xl{
             width: 50%;
             margin-left: auto;
-            margin-right: auto;        }
+            margin-right: auto;        
+        }
     }
     &__plat{
         z-index: 1;
         position: relative;
+        display: block;
         height: 55px;
         margin-bottom: 10px;
         background: $color-back;
@@ -123,6 +133,7 @@
         color: $color-font-txt;
     }
     .plat__nom, .plat__info{
+        display: block;
         padding: 5px 0;
         white-space: nowrap;
         overflow: hidden;
@@ -132,6 +143,7 @@
         }
     }
     .plat__prix{
+        display: block;
         float: right;
         padding-top: 8px;
         @include md{

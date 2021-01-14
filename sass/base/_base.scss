@@ -2,13 +2,13 @@ body{
     margin: 0;
     padding: 0;
     color: $color-font-txt;
-    font-family: 'robotothin', Arial, sans-serif;
+    font-family: 'roboto', Arial, sans-serif;
     font-size: 1rem;
 }
 
 .wrapper{
     min-width: 375px;
-    background-color: darken($color-back, 5%);
+    background-color: darken($color-back, 2%);
     margin-left: auto;
     margin-right: auto;
     @include xl{
@@ -22,7 +22,7 @@ a{
 }
 
 h1{
-    font-size: 2.4rem;
+    font-size: 2rem;
     @include md{
         font-size: 4.4rem;
     }
@@ -31,9 +31,8 @@ h1{
     }
 }
 
-h5{
+h3{
     font-size: 1.2rem;
-    font-weight: bold;
     margin: 10px;
     @include md{
         font-size: 1.4rem;

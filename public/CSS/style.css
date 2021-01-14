@@ -563,7 +563,7 @@
    License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h3, h3, h4, h3, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -613,10 +613,26 @@ table {
 }
 
 @font-face {
-  font-family: 'robotothin';
+  font-family: 'roboto';
   src: url("../../public/Fonts/roboto_thin_macroman/Roboto-Thin-webfont.eot");
   src: url("../../public/Fonts/roboto_thin_macroman/Roboto-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../../public/Fonts/roboto_thin_macroman/Roboto-Thin-webfont.woff2") format("woff2"), url("../../public/Fonts/roboto_thin_macroman/Roboto-Thin-webfont.woff") format("woff"), url("../../public/Fonts/roboto_thin_macroman/Roboto-Thin-webfont.ttf") format("truetype"), url("../../public/Fonts/roboto_thin_macroman/Roboto-Thin-webfont.svg#robotothin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url("../../public/Fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot");
+  src: url("../../public/Fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../public/Fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff2") format("woff2"), url("../../public/Fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("../../public/Fonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype"), url("../../public/Fonts/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotothin") format("svg");
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url("../../public/Fonts/roboto_bold_macroman/Roboto-Bold-webfont.eot");
+  src: url("../../public/Fonts/roboto_bold_macroman/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../public/Fonts/roboto_bold_macroman/Roboto-Bold-webfont.woff2") format("woff2"), url("../../public/Fonts/roboto_bold_macroman/Roboto-Bold-webfont.woff") format("woff"), url("../../public/Fonts/roboto_bold_macroman/Roboto-Bold-webfont.ttf") format("truetype"), url("../../public/Fonts/roboto_bold_macroman/Roboto-Bold-webfont.svg#robotothin") format("svg");
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -629,13 +645,13 @@ body {
   margin: 0;
   padding: 0;
   color: #000;
-  font-family: 'robotothin', Arial, sans-serif;
+  font-family: 'roboto', Arial, sans-serif;
   font-size: 1rem;
 }
 
 .wrapper {
   min-width: 375px;
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   margin-left: auto;
   margin-right: auto;
 }
@@ -652,7 +668,7 @@ a {
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -667,23 +683,20 @@ h1 {
   }
 }
 
-h5 {
+h3 {
   font-size: 1.2rem;
-  font-weight: bold;
   margin: 10px;
 }
 
 @media (min-width: 768px) {
-  h5 {
+  h3 {
     font-size: 1.4rem;
     margin: 20px;
   }
 }
 
 .barreRecherche {
-  background-color: #d9d9d9;
-  -webkit-box-shadow: 0 0 5px #bdbdbd;
-          box-shadow: 0 0 5px #bdbdbd;
+  background-color: #ebebeb;
 }
 
 .barreRecherche form {
@@ -691,7 +704,9 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 60px;
+  -webkit-box-shadow: inset 0 1px 5px #cccccc;
+          box-shadow: inset 0 1px 5px #cccccc;
+  height: 50px;
 }
 
 @media (min-width: 768px) {
@@ -705,10 +720,10 @@ h5 {
 }
 
 .barreRecherche form label {
-  margin: auto;
-  width: 40%;
+  margin: auto 5% auto 30%;
+  width: auto;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -717,13 +732,20 @@ h5 {
   }
 }
 
+@media (min-width: 1200px) {
+  .barreRecherche form label {
+    margin: auto 5% auto 35%;
+  }
+}
+
 .barreRecherche form input {
   border: none;
-  width: 90%;
-  font-size: 1.2rem;
   font-weight: bold;
-  background-color: #d9d9d9;
-  padding: 19px 0;
+  color: #4d4d4d;
+  width: 90%;
+  font-size: 1rem;
+  background-color: #ebebeb;
+  margin: 15px 0 0px 0;
 }
 
 @media (min-width: 768px) {
@@ -737,12 +759,12 @@ h5 {
   border-radius: 50px;
   -webkit-box-shadow: 5px 5px 10px #b3b3b3;
           box-shadow: 5px 5px 10px #b3b3b3;
-  width: 50%;
+  width: 55%;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   color: #fff;
   font-weight: bold;
   height: 50px;
-  margin: 30px 25%;
+  margin: 25px 22.5% 50px 22.5%;
 }
 
 @media (min-width: 768px) {
@@ -772,7 +794,7 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 70px;
+  height: 50px;
   width: 100%;
   background: #fff;
   -webkit-box-shadow: 5px 5px 10px #e6e6e6;
@@ -786,7 +808,7 @@ h5 {
 
 @media (min-width: 768px) {
   .btn__nav {
-    height: 80px;
+    height: 60px;
     width: 70%;
     margin: 30px 0% 0 15%;
     -webkit-box-shadow: -5px -5px 10px #e6e6e6, 5px 5px 10px #e6e6e6;
@@ -802,9 +824,9 @@ h5 {
 }
 
 .btn__nav p {
-  margin: auto;
+  margin: auto 7%;
   color: #000;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -832,49 +854,51 @@ h5 {
 }
 
 .btn__nav i {
-  margin: auto 0 auto 50px;
+  margin: auto 0 auto 40px;
   color: gray;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 768px) {
-  .btn__nav i {
+  .btn__nav {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .btn__nav i {
+  .btn__nav {
     margin: auto 0 auto 40px;
   }
 }
 
 .btn_chiffre {
   position: absolute;
-  left: -1%;
+  left: -3%;
   top: 25px;
   background-color: #9356DC;
   color: white;
   font-size: 1rem;
   border-radius: 25px;
-  padding: 5px 10px;
+  font-weight: 100;
+  font-family: sans-serif;
+  padding: 3px 7px;
 }
 
 @media (min-width: 768px) {
   .btn_chiffre {
     font-size: 1.5rem;
-    padding: 5px 13px;
+    padding: 5px 10px;
     left: -3.5%;
-    top: 20px;
+    top: 25px;
   }
 }
 
 @media (min-width: 1200px) {
   .btn_chiffre {
-    padding: 5px 11px;
-    left: -5.5%;
+    padding: 5px 9px;
+    left: -5%;
     font-size: 1.2rem;
-    top: 21px;
+    top: 25px;
   }
 }
 
@@ -904,9 +928,13 @@ header .retourMenu {
   width: -moz-max-content;
   width: max-content;
   position: absolute;
-  top: 25px;
+  top: 23px;
   left: 5%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+
+header .retourMenu a {
+  color: #4d4d4d;
 }
 
 @media (min-width: 768px) {
@@ -938,7 +966,7 @@ header .logo {
 
 .fonction {
   position: relative;
-  padding: 30px 5%;
+  padding: 50px 5% 30px 5%;
   background-color: #fff;
 }
 
@@ -949,7 +977,8 @@ header .logo {
 }
 
 .fonction .titreNav {
-  font-size: 1.6rem;
+  font-family: sans-serif;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
@@ -976,6 +1005,11 @@ header .logo {
   }
 }
 
+.fonction .listeNav li:first-child i {
+  font-size: 1.5rem;
+  margin: auto 0 auto 42px;
+}
+
 @media (min-width: 1200px) {
   .fonction .listeNav li {
     width: 30%;
@@ -987,22 +1021,21 @@ footer .wrapper {
   color: #fff;
 }
 
-footer h2 {
-  font-size: 1.2rem;
+footer h3 {
   font-family: 'Shrikhand';
-  margin: 0 8% 20px 8%;
-  padding: 2% 4%;
+  padding: 40px 5% 20px 5%;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
-  footer h2 {
+  footer h3 {
     font-size: 1.8rem;
     margin-left: 2%;
   }
 }
 
 footer ul {
-  padding: 2% 4%;
+  padding-bottom: 30px;
 }
 
 @media (min-width: 768px) {
@@ -1016,7 +1049,7 @@ footer ul {
 }
 
 footer li {
-  padding: 10px 8%;
+  padding: 8px 5%;
 }
 
 @media (min-width: 768px) {
@@ -1051,6 +1084,7 @@ footer a i {
 @media (min-width: 1200px) {
   footer a i {
     font-size: 1.3rem;
+    margin-right: 8px;
   }
 }
 
@@ -1083,8 +1117,20 @@ footer a:visited {
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  .loadingSpinner .couvertAssiette {
+    margin-top: 200px;
+  }
+}
+
 .loadingSpinner .couvert {
   height: 60px;
+}
+
+@media (min-width: 1200px) {
+  .loadingSpinner .couvert {
+    height: 220px;
+  }
 }
 
 .loadingSpinner .loader-quart {
@@ -1094,6 +1140,14 @@ footer a:visited {
   border-radius: 50px;
   border: 6px solid #fface8;
   position: relative;
+}
+
+@media (min-width: 1200px) {
+  .loadingSpinner .loader-quart {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+  }
 }
 
 .loadingSpinner .loader-quart::after {
@@ -1111,15 +1165,22 @@ footer a:visited {
           animation: spin .5s infinite ease;
 }
 
+@media (min-width: 1200px) {
+  .loadingSpinner .loader-quart::after {
+    border-radius: 200px;
+  }
+}
+
 .indexRetour {
   display: none;
 }
 
 .text_acc1 {
   margin: 40px 15% 20px 15%;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+  font-family: 'roboto';
 }
 
 @media (min-width: 768px) {
@@ -1133,6 +1194,7 @@ footer a:visited {
   margin: 0 10%;
   text-align: center;
   color: gray;
+  font-weight: 100;
 }
 
 @media (min-width: 768px) {
@@ -1146,20 +1208,21 @@ section {
   padding: 4%;
 }
 
-section h1 {
-  font-size: 1.6rem;
+section h2 {
+  font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 25px;
+  font-family: 'roboto';
 }
 
 @media (min-width: 768px) {
-  section h1 {
+  section h2 {
     font-size: 1.8rem;
   }
 }
 
 @media (min-width: 1200px) {
-  section h1 {
+  section h2 {
     margin-bottom: 50px;
   }
 }
@@ -1230,6 +1293,7 @@ section h1 {
 
 .index_carte1 .lieu {
   margin: 0 10px;
+  font-weight: 100;
 }
 
 @media (min-width: 768px) {
@@ -1297,12 +1361,15 @@ section h1 {
 @media (min-width: 992px) {
   .index_carte1 .heart {
     top: 335px;
-    left: 90%;
   }
 }
 
 .index_carte1 .heart__Full {
-  color: #9356DC;
+  color: transparent;
+  background: linear-gradient(70deg, #ff93e1, #a16be0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .index_carte1 .heart__Empty {
@@ -1318,11 +1385,11 @@ section h1 {
 .index_carte1 .new {
   background-color: #99E2D0;
   color: #278870;
-  font-weight: bold;
-  padding: 3%;
+  padding: 6px 3%;
+  font-size: 0.9rem;
   position: absolute;
   top: 20px;
-  left: 70%;
+  left: 75%;
   -webkit-animation: newResto 3s infinite;
           animation: newResto 3s infinite;
 }
@@ -1364,43 +1431,48 @@ section h1 {
 
 @media (min-width: 1200px) {
   .photoResto {
-    border-radius: 0 0 25px 25px;
-    -webkit-box-shadow: 0px 10px 10px #99E2D0;
-            box-shadow: 0px 10px 10px #99E2D0;
+    border-radius: 25px 25px 0 0;
   }
 }
 
 .carteResto {
   position: relative;
   background: #f2f2f2;
-  top: -20px;
+  top: -35px;
   padding: 0 3% 20px 3%;
+  margin-bottom: -35px;
   border-radius: 25px 25px 0 0;
+}
+
+@media (min-width: 768px) {
+  .carteResto {
+    top: -45px;
+  }
 }
 
 @media (min-width: 1200px) {
   .carteResto {
-    top: 10px;
+    top: -25px;
     border-radius: 0 0 0 0;
   }
 }
 
 .carteResto .titreResto {
   font-family: 'Shrikhand';
-  font-size: 1.4rem;
-  padding: 20px 0;
+  font-size: 1.8rem;
+  padding: 40px 0 20px 0;
 }
 
 @media (min-width: 768px) {
   .carteResto .titreResto {
     font-size: 3rem;
-    padding: 30px 0 0 0;
+    padding: 60px 0 0 0;
   }
 }
 
 @media (min-width: 1200px) {
   .carteResto .titreResto {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
 }
 
@@ -1422,25 +1494,29 @@ section h1 {
   font-size: 1.4rem;
   position: absolute;
   left: 85%;
-  top: 18px;
+  top: 40px;
 }
 
 @media (min-width: 768px) {
   .carteResto .heart {
-    top: 30px;
+    top: 50px;
     font-size: 3.5rem;
   }
 }
 
 @media (min-width: 1200px) {
   .carteResto .heart {
-    font-size: 2rem;
+    font-size: 3rem;
     left: 90%;
   }
 }
 
 .carteResto .heart__Full {
-  color: #9356DC;
+  color: transparent;
+  background: linear-gradient(70deg, #ff93e1, #a16be0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .carteResto .heart__Empty {
@@ -1492,6 +1568,7 @@ section h1 {
 
 .menuResto .vignette_plat {
   position: relative;
+  display: block;
 }
 
 @media (min-width: 1200px) {
@@ -1505,6 +1582,7 @@ section h1 {
 .menuResto__plat {
   z-index: 1;
   position: relative;
+  display: block;
   height: 55px;
   margin-bottom: 10px;
   background: #fff;
@@ -1526,6 +1604,7 @@ section h1 {
 }
 
 .menuResto .plat__nom, .menuResto .plat__info {
+  display: block;
   padding: 5px 0;
   white-space: nowrap;
   overflow: hidden;
@@ -1539,6 +1618,7 @@ section h1 {
 }
 
 .menuResto .plat__prix {
+  display: block;
   float: right;
   padding-top: 8px;
 }

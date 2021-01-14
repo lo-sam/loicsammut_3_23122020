@@ -1,11 +1,11 @@
 .barreRecherche{
-    background-color: darken($color-back,15%);
-    box-shadow: 0 0 5px #bdbdbd;
+    background-color: darken($color-back,8%);
     form{
-      //  width: max-content;
         margin: auto;
         display: flex;
-        height: 60px;
+        box-shadow: inset 0 1px 5px darken($color-back,20%);
+
+        height: 50px;
         @include md{
             height: 80px;
         }
@@ -13,21 +13,25 @@
             margin: 0 20% 0 25%;
         }
         label{
-            margin: auto;
-            width: 40%;
+            margin: auto 5% auto 30%;
+            width: auto;
             text-align: center;    
-            font-size: 1.2rem;
+            font-size: 1rem;
             @include md{
                 font-size: 2.2rem;
+            }
+            @include xl{
+                margin: auto 5% auto 35%;
             }
         }
         input{
             border: none;
-            width: 90%;
-            font-size: 1.2rem;
             font-weight: bold;
-            background-color: darken($color-back,15%);
-            padding: 19px 0;
+            color: lighten($color-font-txt,30%);
+            width: 90%;
+            font-size: 1rem;
+            background-color: darken($color-back,8%);
+            margin: 15px 0 0px 0;
             @include md{
                 font-size: 2.2rem;
             }

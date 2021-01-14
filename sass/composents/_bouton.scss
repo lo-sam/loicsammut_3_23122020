@@ -2,12 +2,12 @@
     border-style: none;
     border-radius: 50px;
     box-shadow: 5px 5px 10px darken($color: $color-back, $amount: 30%);
-    width: 50%;
+    width: 55%;
     background: linear-gradient(170deg, $color-sec, $color-prim);
     color: $color-back;
     font-weight: bold;
     height: 50px;
-    margin: 30px 25%;
+    margin: 25px 22.5% 50px 22.5%;
     @include md{
         font-size: 1.3rem;
         height: 60px;
@@ -26,7 +26,7 @@
     }    
     &__nav{
         display: flex;
-        height: 70px;
+        height: 50px;
         width: 100%;
         background: $color-back;
         box-shadow: 5px 5px 10px darken($color-back,10%);
@@ -36,7 +36,7 @@
         padding: 10px 0;
         position: relative;
         @include md{
-            height: 80px;
+            height: 60px;
             width: 70%;
             margin: 30px 0% 0 15%;
             box-shadow: -5px -5px 10px darken($color-back,10%), 5px 5px 10px darken($color-back,10%);
@@ -46,9 +46,9 @@
             margin: 0;
         }
         p{
-            margin: auto;
+            margin: auto 7%;
             color: $color-font-txt;
-            font-size: 1.1rem;
+            font-size: 1rem;
             @include md{
                 font-size: 1.8rem;
             }
@@ -65,38 +65,40 @@
             }
         }
         i{
-            margin: auto 0 auto 50px;
+            margin: auto 0 auto 40px;
             color: lighten($color-font-txt, 50%);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            }
             @include md{
                 font-size: 2rem;
             }
             @include xl{
                 margin: auto 0 auto 40px;
             }
-        }
     }
 }
 
 .btn_chiffre{
     position: absolute;
-    left: -1%;
+    left: -3%;
     top: 25px;
     background-color: $color-prim;
     color: white;
     font-size: 1rem;
     border-radius: 25px;
-    padding: 5px 10px;
+    font-weight: 100;
+    font-family: sans-serif;
+    padding: 3px 7px;
     @include md{
         font-size: 1.5rem;
-        padding: 5px 13px;
+        padding: 5px 10px;
         left: -3.5%;
-        top: 20px;
+        top: 25px;
     }
     @include xl{
-        padding: 5px 11px;
-        left: -5.5%;
+        padding: 5px 9px;
+        left: -5%;
         font-size: 1.2rem;
-        top: 21px;
+        top: 25px;
     }
 }
