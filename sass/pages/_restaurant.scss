@@ -65,7 +65,7 @@
         }
         &__Full{
             color: transparent;
-            background: linear-gradient(70deg, lighten($color-sec, 5%), lighten($color-prim, 5%));
+            background: linear-gradient(160deg, lighten($color-sec, 5%), lighten($color-prim, 5%));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -227,6 +227,9 @@
 .ouverture_3{
     animation: ouverture_3 3s;
 }
+.ouverture_3_2{
+    animation: ouverture_3_2 3s;
+}
 .ouverture_4{
     animation: ouverture_4 3s;
 }
@@ -246,7 +249,7 @@
     animation: ouverture_9 3s;
 }
 
-.ouverture_1, .ouverture_2, .ouverture_3, .ouverture_4, .ouverture_5, .ouverture_6, .ouverture_7, .ouverture_8, .ouverture_9{
+.ouverture_1, .ouverture_2, .ouverture_3, .ouverture_3_2, .ouverture_4, .ouverture_5, .ouverture_6, .ouverture_7, .ouverture_8, .ouverture_9{
     @include xl{
         animation: ouverturexl 2.5s ease-in-out ;
     }

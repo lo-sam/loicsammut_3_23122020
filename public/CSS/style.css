@@ -360,6 +360,28 @@
   }
 }
 
+@-webkit-keyframes ouverture_3_2 {
+  0% {
+    -webkit-transform: translatey(-340px);
+            transform: translatey(-340px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes ouverture_3_2 {
+  0% {
+    -webkit-transform: translatey(-340px);
+            transform: translatey(-340px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 @-webkit-keyframes ouverture_4 {
   0% {
     -webkit-transform: translatey(-380px);
@@ -1366,7 +1388,7 @@ section h2 {
 
 .index_carte1 .heart__Full {
   color: transparent;
-  background: linear-gradient(70deg, #ff93e1, #a16be0);
+  background: linear-gradient(160deg, #ff93e1, #a16be0);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1513,7 +1535,7 @@ section h2 {
 
 .carteResto .heart__Full {
   color: transparent;
-  background: linear-gradient(70deg, #ff93e1, #a16be0);
+  background: linear-gradient(160deg, #ff93e1, #a16be0);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1745,6 +1767,11 @@ section h2 {
           animation: ouverture_3 3s;
 }
 
+.ouverture_3_2 {
+  -webkit-animation: ouverture_3_2 3s;
+          animation: ouverture_3_2 3s;
+}
+
 .ouverture_4 {
   -webkit-animation: ouverture_4 3s;
           animation: ouverture_4 3s;
@@ -1776,7 +1803,7 @@ section h2 {
 }
 
 @media (min-width: 1200px) {
-  .ouverture_1, .ouverture_2, .ouverture_3, .ouverture_4, .ouverture_5, .ouverture_6, .ouverture_7, .ouverture_8, .ouverture_9 {
+  .ouverture_1, .ouverture_2, .ouverture_3, .ouverture_3_2, .ouverture_4, .ouverture_5, .ouverture_6, .ouverture_7, .ouverture_8, .ouverture_9 {
     -webkit-animation: ouverturexl 2.5s ease-in-out;
             animation: ouverturexl 2.5s ease-in-out;
   }

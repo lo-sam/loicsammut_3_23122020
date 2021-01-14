@@ -163,6 +163,14 @@
         transform: translateY(0)
     }
 }
+@keyframes ouverture_3_2{
+    0%{
+        transform: translatey(-340px) ;
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
 @keyframes ouverture_4{
     0%{
         transform: translatey(-380px) ;
