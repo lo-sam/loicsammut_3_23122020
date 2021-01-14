@@ -11,12 +11,18 @@
     .couvertAssiette{
         margin: auto;
         text-align: center;
+        @include lg{
+            margin-top: 150px;
+        }
         @include xl{
             margin-top: 200px;
         }
     }
     .couvert{
         height: 60px;
+        @include lg{
+            height: 150px;
+        }
         @include xl{
             height: 220px;
         }
@@ -28,6 +34,11 @@
         border-radius: 50px;
         border: 6px solid lighten($color: $color-sec, $amount: 10%);
         position: relative;
+        @include lg{
+            width: 150px;
+            height: 150px;
+            border-radius: 150px;
+        }
         @include xl{
             width: 200px;
             height: 200px;
@@ -45,6 +56,9 @@
             border-top-color: $color-sec;
             border-bottom-color: $color-sec;
             animation: spin .5s infinite ease ;
+            @include lg{
+                border-radius: 150px;
+            }
             @include xl{
                 border-radius: 200px;
             }
@@ -176,7 +190,7 @@ section{
         &:checked + .heart__Empty{
             z-index: 0;
             & + .heart__Full{
-                animation: likeAnime 2s;
+                animation: likeAnime 2s forwards;
             }
         }
     }
