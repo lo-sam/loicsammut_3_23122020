@@ -1056,6 +1056,12 @@ footer h3 {
   }
 }
 
+@media (min-width: 1200px) {
+  footer h3 {
+    margin-top: 20px;
+  }
+}
+
 footer ul {
   padding-bottom: 30px;
 }
@@ -1524,13 +1530,14 @@ section h2 {
   display: none;
 }
 
-.carteResto #like1:checked + .heart__Empty {
-  z-index: 0;
-}
-
-.carteResto #like1:checked + .heart__Empty + .heart__Full {
-  -webkit-animation: likeAnime 2s forwards;
-          animation: likeAnime 2s forwards;
+@media (min-width: 768px) {
+  .carteResto #like1:checked + .heart__Empty {
+    z-index: 0;
+  }
+  .carteResto #like1:checked + .heart__Empty + .heart__Full {
+    -webkit-animation: likeAnime 2s forwards;
+            animation: likeAnime 2s forwards;
+  }
 }
 
 .carteResto .heart {
@@ -1572,7 +1579,9 @@ section h2 {
 }
 
 .carteResto .heart__Empty:hover {
-  opacity: 0.3;
+  opacity: 0;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
 }
 
 .menuResto {

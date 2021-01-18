@@ -39,10 +39,12 @@
         display: none;
     }
     #like1{
-        &:checked + .heart__Empty{
-            z-index: 0;
-            & + .heart__Full{
-                animation: likeAnime 2s forwards;
+        @include md{
+            &:checked + .heart__Empty{
+                z-index: 0;
+                & + .heart__Full{
+                    animation: likeAnime 2s forwards;
+                }
             }
         }
     }
@@ -74,7 +76,8 @@
             background-color: darken($color-back, 5%);
             z-index: 1;
             &:hover{
-               opacity: 0.3;
+                opacity: 0;
+                transition-duration: 1.5s;
             }
         }
     }

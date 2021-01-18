@@ -1,16 +1,19 @@
 footer{
     .wrapper{
-    background-color: $color-footer;
-    color: $color-font-foot;
+        background-color: $color-footer;
+        color: $color-font-foot;
     }
     h3{
-    font-family: 'Shrikhand';
-    padding: 40px 5% 20px 5%;
-    margin: 0;
-    @include md{
-        font-size: 1.8rem;
-        margin-left: 2%;
-    }
+        font-family: 'Shrikhand';
+        padding: 40px 5% 20px 5%;
+        margin: 0;
+        @include md{
+            font-size: 1.8rem;
+            margin-left: 2%;
+        }
+        @include xl{
+            margin-top: 20px;
+        }
     }
     ul{
         padding-bottom: 30px;
