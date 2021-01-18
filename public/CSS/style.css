@@ -1389,7 +1389,7 @@ section h2 {
 }
 
 .index_carte1 #like4:checked + .heart__Empty {
-  z-index: 0;
+  opacity: 0;
 }
 
 .index_carte1 #like4:checked + .heart__Empty + .heart__Full {
@@ -1534,7 +1534,7 @@ section h2 {
 
 @media (min-width: 768px) {
   .carteResto #like1:checked + .heart__Empty {
-    z-index: 0;
+    opacity: 0;
   }
   .carteResto #like1:checked + .heart__Empty + .heart__Full {
     -webkit-animation: likeAnime 2s forwards;

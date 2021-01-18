@@ -41,7 +41,7 @@
     #like1{
         @include md{
             &:checked + .heart__Empty{
-                z-index: 0;
+                opacity: 0;
                 & + .heart__Full{
                     animation: likeAnime 2s forwards;
                 }
