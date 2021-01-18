@@ -221,7 +221,8 @@ section{
             background-color: $color-back;
             z-index: 1;
             &:hover{
-               opacity: 0.3;
+                opacity: 0;
+                transition-duration: 1.5s;
             }
         }
     }
