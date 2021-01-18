@@ -15,13 +15,10 @@
 .carteResto{
     position: relative;
     background: darken($color-back, 5%);
-    top: -35px;
+    top: -45px;
     padding: 0 3% 20px 3%;
-    margin-bottom: -35px;
+    margin-bottom: -65px;
     border-radius: 25px 25px 0 0;
-    @include md{
-        top: -45px;
-    }
     @include xl{
         top: -25px;
         border-radius: 0 0 0 0;
@@ -55,9 +52,11 @@
         position: absolute;
         left: 85%;       
         top: 40px;
+         width: 24px;
         @include md{
             top: 50px;
             font-size: 3.5rem;
+            width: 58px;
         }
         @include xl{
             font-size: 3rem;
