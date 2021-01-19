@@ -1365,31 +1365,55 @@ section h2 {
   z-index: 0;
 }
 
+@media (min-width: 1200px) {
+  .index_carte1 #like1:checked + .heart__Empty {
+    opacity: 0;
+  }
+}
+
 .index_carte1 #like1:checked + .heart__Empty + .heart__Full {
-  -webkit-animation: likeAnime 2s;
-          animation: likeAnime 2s;
+  -webkit-animation: likeAnime 2s forwards;
+          animation: likeAnime 2s forwards;
 }
 
 .index_carte1 #like2:checked + .heart__Empty {
   z-index: 0;
 }
 
+@media (min-width: 1200px) {
+  .index_carte1 #like2:checked + .heart__Empty {
+    opacity: 0;
+  }
+}
+
 .index_carte1 #like2:checked + .heart__Empty + .heart__Full {
-  -webkit-animation: likeAnime 2s;
-          animation: likeAnime 2s;
+  -webkit-animation: likeAnime 2s forwards;
+          animation: likeAnime 2s forwards;
 }
 
 .index_carte1 #like3:checked + .heart__Empty {
   z-index: 0;
 }
 
+@media (min-width: 1200px) {
+  .index_carte1 #like3:checked + .heart__Empty {
+    opacity: 0;
+  }
+}
+
 .index_carte1 #like3:checked + .heart__Empty + .heart__Full {
-  -webkit-animation: likeAnime 2s;
-          animation: likeAnime 2s;
+  -webkit-animation: likeAnime 2s forwards;
+          animation: likeAnime 2s forwards;
 }
 
 .index_carte1 #like4:checked + .heart__Empty {
-  opacity: 0;
+  z-index: 0;
+}
+
+@media (min-width: 1200px) {
+  .index_carte1 #like4:checked + .heart__Empty {
+    opacity: 0;
+  }
 }
 
 .index_carte1 #like4:checked + .heart__Empty + .heart__Full {
@@ -1434,10 +1458,12 @@ section h2 {
   z-index: 1;
 }
 
-.index_carte1 .heart__Empty:hover {
-  opacity: 0;
-  -webkit-transition-duration: 1.5s;
-          transition-duration: 1.5s;
+@media (min-width: 1200px) {
+  .index_carte1 .heart__Empty:hover {
+    opacity: 0;
+    -webkit-transition-duration: 1.5s;
+            transition-duration: 1.5s;
+  }
 }
 
 .index_carte1 .new {
@@ -1502,6 +1528,13 @@ section h2 {
   border-radius: 25px 25px 0 0;
 }
 
+@media (min-width: 768px) {
+  .carteResto {
+    top: -70px;
+    margin-bottom: -90px;
+  }
+}
+
 @media (min-width: 1200px) {
   .carteResto {
     top: -25px;
@@ -1532,14 +1565,19 @@ section h2 {
   display: none;
 }
 
-@media (min-width: 768px) {
+.carteResto #like1:checked + .heart__Empty {
+  z-index: 0;
+}
+
+@media (min-width: 1200px) {
   .carteResto #like1:checked + .heart__Empty {
     opacity: 0;
   }
-  .carteResto #like1:checked + .heart__Empty + .heart__Full {
-    -webkit-animation: likeAnime 2s forwards;
-            animation: likeAnime 2s forwards;
-  }
+}
+
+.carteResto #like1:checked + .heart__Empty + .heart__Full {
+  -webkit-animation: likeAnime 2s forwards;
+          animation: likeAnime 2s forwards;
 }
 
 .carteResto .heart {
@@ -1580,10 +1618,12 @@ section h2 {
   z-index: 1;
 }
 
-.carteResto .heart__Empty:hover {
-  opacity: 0;
-  -webkit-transition-duration: 1.5s;
-          transition-duration: 1.5s;
+@media (min-width: 1200px) {
+  .carteResto .heart__Empty:hover {
+    opacity: 0;
+    -webkit-transition-duration: 1.5s;
+            transition-duration: 1.5s;
+  }
 }
 
 .menuResto {

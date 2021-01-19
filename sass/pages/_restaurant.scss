@@ -19,6 +19,10 @@
     padding: 0 3% 20px 3%;
     margin-bottom: -65px;
     border-radius: 25px 25px 0 0;
+    @include md{
+        top: -70px;
+        margin-bottom: -90px;
+    }
     @include xl{
         top: -25px;
         border-radius: 0 0 0 0;
@@ -39,14 +43,15 @@
         display: none;
     }
     #like1{
-        @include md{
             &:checked + .heart__Empty{
-                opacity: 0;
+                z-index: 0;
+                @include xl{
+                    opacity: 0;
+                }
                 & + .heart__Full{
                     animation: likeAnime 2s forwards;
                 }
             }
-        }
     }
     .heart{
         cursor: pointer;
@@ -75,9 +80,11 @@
             color: $color-font-com;
             background-color: darken($color-back, 5%);
             z-index: 1;
-            &:hover{
-                opacity: 0;
-                transition-duration: 1.5s;
+            @include xl{
+                &:hover{
+                    opacity: 0;
+                    transition-duration: 1.5s;
+                }
             }
         }
     }
