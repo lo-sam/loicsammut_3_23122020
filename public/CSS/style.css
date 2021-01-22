@@ -1663,17 +1663,18 @@ section h2 {
   }
 }
 
-.menuResto .vignette_plat {
-  position: relative;
-  display: block;
-}
-
 @media (min-width: 1200px) {
-  .menuResto .vignette_plat {
+  .menuResto label {
+    display: block;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.menuResto .vignette_plat {
+  position: relative;
+  display: block;
 }
 
 .menuResto__plat {

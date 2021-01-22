@@ -114,14 +114,17 @@
             }
         }
     }
+    label{
+        @include xl{
+            display: block;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;       
+        }
+    }
     .vignette_plat{
         position: relative;
         display: block;
-        @include xl{
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;        
-        }
     }
     &__plat{
         z-index: 1;
@@ -214,7 +217,7 @@
                 @include xl{
                     animation: none;
                     box-shadow: 5px 5px 10px darken($color-back,10%);
-                }
+               }
             }
             .fondVert i{
                 animation: deplaceCheck 1 linear .3s forwards;
