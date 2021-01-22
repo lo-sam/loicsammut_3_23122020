@@ -804,7 +804,7 @@ h3 {
   }
 }
 
-.btn__explo:hover {
+.btn__explo:hover, .btn__explo:active {
   -webkit-transition: .5s;
   transition: .5s;
   background: linear-gradient(170deg, #ff93e1, #a16be0);
@@ -863,7 +863,7 @@ h3 {
   }
 }
 
-.btn__nav:hover {
+.btn__nav:hover, .btn__nav:active {
   -webkit-transition: .5s;
   transition: .5s;
   background-color: #ece1f9;
@@ -871,7 +871,7 @@ h3 {
           box-shadow: 5px 5px 10px #b3b3b3;
 }
 
-.btn__nav:hover i {
+.btn__nav:hover i, .btn__nav:active i {
   color: #9356DC;
 }
 
@@ -1784,6 +1784,46 @@ section h2 {
     top: 30px;
     font-size: 2rem;
     opacity: 0;
+  }
+}
+
+.menuResto #entreeSelectionne1:hover + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne2:hover + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne3:hover + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne4:hover + .marginCheck .menuResto__plat, .menuResto #platSelectionne1:hover + .marginCheck .menuResto__plat,
+.menuResto #platSelectionne2:hover + .marginCheck .menuResto__plat, .menuResto #platSelectionne3:hover + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne1:hover + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne2:hover + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne3:hover + .marginCheck .menuResto__plat {
+  -webkit-animation: prixAnim 1 linear .3s forwards;
+          animation: prixAnim 1 linear .3s forwards;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media (min-width: 768px) {
+  .menuResto #entreeSelectionne1:hover + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne2:hover + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne3:hover + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne4:hover + .marginCheck .menuResto__plat, .menuResto #platSelectionne1:hover + .marginCheck .menuResto__plat,
+  .menuResto #platSelectionne2:hover + .marginCheck .menuResto__plat, .menuResto #platSelectionne3:hover + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne1:hover + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne2:hover + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne3:hover + .marginCheck .menuResto__plat {
+    -webkit-animation: prixAnim-md 1 linear .3s forwards;
+            animation: prixAnim-md 1 linear .3s forwards;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menuResto #entreeSelectionne1:hover + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne2:hover + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne3:hover + .marginCheck .menuResto__plat, .menuResto #entreeSelectionne4:hover + .marginCheck .menuResto__plat, .menuResto #platSelectionne1:hover + .marginCheck .menuResto__plat,
+  .menuResto #platSelectionne2:hover + .marginCheck .menuResto__plat, .menuResto #platSelectionne3:hover + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne1:hover + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne2:hover + .marginCheck .menuResto__plat, .menuResto #dessertSelectionne3:hover + .marginCheck .menuResto__plat {
+    -webkit-animation: none;
+            animation: none;
+    -webkit-box-shadow: 5px 5px 10px #e6e6e6;
+            box-shadow: 5px 5px 10px #e6e6e6;
+  }
+}
+
+.menuResto #entreeSelectionne1:hover + .marginCheck .fondVert i, .menuResto #entreeSelectionne2:hover + .marginCheck .fondVert i, .menuResto #entreeSelectionne3:hover + .marginCheck .fondVert i, .menuResto #entreeSelectionne4:hover + .marginCheck .fondVert i, .menuResto #platSelectionne1:hover + .marginCheck .fondVert i,
+.menuResto #platSelectionne2:hover + .marginCheck .fondVert i, .menuResto #platSelectionne3:hover + .marginCheck .fondVert i, .menuResto #dessertSelectionne1:hover + .marginCheck .fondVert i, .menuResto #dessertSelectionne2:hover + .marginCheck .fondVert i, .menuResto #dessertSelectionne3:hover + .marginCheck .fondVert i {
+  -webkit-animation: deplaceCheck 1 linear .3s forwards;
+          animation: deplaceCheck 1 linear .3s forwards;
+}
+
+@media (min-width: 1200px) {
+  .menuResto #entreeSelectionne1:hover + .marginCheck .fondVert i, .menuResto #entreeSelectionne2:hover + .marginCheck .fondVert i, .menuResto #entreeSelectionne3:hover + .marginCheck .fondVert i, .menuResto #entreeSelectionne4:hover + .marginCheck .fondVert i, .menuResto #platSelectionne1:hover + .marginCheck .fondVert i,
+  .menuResto #platSelectionne2:hover + .marginCheck .fondVert i, .menuResto #platSelectionne3:hover + .marginCheck .fondVert i, .menuResto #dessertSelectionne1:hover + .marginCheck .fondVert i, .menuResto #dessertSelectionne2:hover + .marginCheck .fondVert i, .menuResto #dessertSelectionne3:hover + .marginCheck .fondVert i {
+    -webkit-animation: prixAnim-xl 1 linear .3s forwards;
+            animation: prixAnim-xl 1 linear .3s forwards;
   }
 }
 

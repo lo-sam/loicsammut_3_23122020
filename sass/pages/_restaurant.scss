@@ -204,6 +204,26 @@
     }
     #entreeSelectionne1, #entreeSelectionne2, #entreeSelectionne3, #entreeSelectionne4,#platSelectionne1,
     #platSelectionne2, #platSelectionne3, #dessertSelectionne1, #dessertSelectionne2, #dessertSelectionne3{
+        &:hover + .marginCheck{
+            .menuResto__plat{
+                animation: prixAnim 1 linear .3s forwards;
+                box-shadow: none;
+                @include md{
+                    animation: prixAnim-md 1 linear .3s forwards;
+                }
+                @include xl{
+                    animation: none;
+                    box-shadow: 5px 5px 10px darken($color-back,10%);
+                }
+            }
+            .fondVert i{
+                animation: deplaceCheck 1 linear .3s forwards;
+                @include xl{
+                    animation: prixAnim-xl 1 linear .3s forwards;
+
+                }
+            }
+        }
         &:checked + .marginCheck {
             .menuResto__plat{
                 animation: prixAnim 1 linear .3s forwards;
